@@ -27,12 +27,20 @@
         color: $primary-color;
         font-style: italic;
         font-size: 2rem;
+
+        @include small {
+          font-size: 1.5rem;
+        }
       }
 
       p {
         color: rgba(0, 0, 0, 0.6);
         line-height: 1.8;
         font-family: $font-raleway;
+
+        @include small {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -49,6 +57,10 @@
         font-size: 2rem;
         color: $primary-color;
         margin: 1rem 0;
+
+        @include small {
+          font-size: 1.5rem;
+        }
       }
 
       & > *:not(h2) {

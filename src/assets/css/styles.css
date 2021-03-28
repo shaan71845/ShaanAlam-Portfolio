@@ -197,10 +197,22 @@ nav .container ul a:hover {
   font-size: 2rem;
 }
 
+@media screen and (max-width: 580px) {
+  .aboutme__leftContainer .aboutme__text h1 {
+    font-size: 1.5rem;
+  }
+}
+
 .aboutme__leftContainer .aboutme__text p {
   color: rgba(0, 0, 0, 0.6);
   line-height: 1.8;
   font-family: "Raleway", sans-serif;
+}
+
+@media screen and (max-width: 580px) {
+  .aboutme__leftContainer .aboutme__text p {
+    font-size: 1rem;
+  }
 }
 
 .aboutme__leftContainer .aboutme__skills {
@@ -219,6 +231,12 @@ nav .container ul a:hover {
   font-size: 2rem;
   color: #121925;
   margin: 1rem 0;
+}
+
+@media screen and (max-width: 580px) {
+  .aboutme__leftContainer .aboutme__skills h2 {
+    font-size: 1.5rem;
+  }
 }
 
 .aboutme__leftContainer .aboutme__skills > *:not(h2) {
