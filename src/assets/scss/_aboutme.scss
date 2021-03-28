@@ -1,0 +1,64 @@
+.aboutme {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  // Left Container
+  &__leftContainer {
+    flex: 2;
+    padding: 2rem;
+
+    // About me paragraph
+    .aboutme__text {
+      margin-top: 2rem;
+
+      h1 {
+        margin: 1rem 0;
+        font-family: $font-noto;
+        color: $primary-color;
+        font-style: italic;
+        font-size: 2rem;
+      }
+
+      p {
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 1.8;
+        font-family: $font-raleway;
+      }
+    }
+
+    // Skills section
+    .aboutme__skills {
+      margin: 3rem 0;
+
+      h2 {
+        font-family: $font-noto;
+        font-style: italic;
+        font-size: 2rem;
+        color: $primary-color;
+        margin: 1rem 0;
+      }
+
+      & > *:not(h2) {
+        margin-right: 20px;
+        width: 70px;
+        fill: lighten($primary-color, 10%);
+      }
+    }
+  }
+
+  // Right Container
+  &__rightContainer {
+    flex: 1;
+    background: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 70%;
+      height: 60%;
+    }
+  }
+}
