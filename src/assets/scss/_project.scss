@@ -50,11 +50,15 @@
       }
     }
 
-    a {
+    .project__urls {
+      margin-top: 2.5rem;
+    }
+
+    .project__url {
       color: $primary-color;
       font-family: $font-raleway;
-      margin-right: 12px;
       font-weight: 400;
+      margin-right: 12px;
 
       @include small {
         display: block;
@@ -70,11 +74,56 @@
       line-height: 1.6;
     }
 
+    // Block content headings
+    figure img {
+      width: 100%;
+    }
+
+    h2,
+    h3 {
+      margin: 0.7rem 0;
+      display: block;
+    }
+
+    // Block content images
+
     // Media queries for .project__details
     @include small {
       padding: 2rem;
       width: 100%;
       margin: 0;
     }
+  }
+
+  .project__authorDetails {
+    margin: 1rem 0;
+
+    .author {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 12px;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+      }
+
+      h5 {
+        font-weight: normal;
+        color: gray;
+        font-family: $font-raleway;
+
+        span {
+          color: #333;
+        }
+      }
+    }
+  }
+
+  hr {
+    height: 1px;
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.3);
   }
 }

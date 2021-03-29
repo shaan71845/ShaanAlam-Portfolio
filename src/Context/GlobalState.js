@@ -50,22 +50,4 @@ const Provider = ({ children }) => {
 
 export default Provider;
 
-// For a single Project Page
-// *[_type == 'project' && slug.current == 'whatsapp-clone']{
-//   title,
-//   body,
-// 	live_url,
-//   github_url,
-//   author -> {
-// 		image {
-// 			asset -> {
-// 				url
-// 			}
-// 		}
-// 	},
-//   mainImage {
-// 		asset -> {
-// 			url
-// 		}
-// 	}
-// }
+

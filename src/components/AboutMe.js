@@ -1,5 +1,4 @@
 import { useContext } from "react";
-// import DevIcon from "devicon-react-svg";
 import { Context } from "../Context/GlobalState";
 import BlockContent from "@sanity/block-content-to-react";
 

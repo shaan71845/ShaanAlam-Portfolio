@@ -1,8 +1,44 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import BlockContent from "@sanity/block-content-to-react";
+import sanityClient from "../client";
+import dateformat from "dateformat";
 
 const Project = () => {
-  // Fetch Data
+  const [project, setProject] = useState(null);
+  const { slug } = useParams();
+
+  useEffect(() => {
+    // Fetch Project data
+    sanityClient
+      .fetch(
+        `*[_type == 'project' && slug.current == '${slug}']{
+          title,
+          body,
+          publishedAt,
+          live_url,
+          github_url,
+          author -> {
+            name,
+            image {
+              asset -> {
+                url
+              }
+            }
+          },
+          mainImage {
+            asset -> {
+              url
+            }
+          }
+        }`
+      )
+      .then((data) => {
+        setProject(data[0]);
+        console.log(data[0]);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <section className="project__page">
@@ -11,19 +47,48 @@ const Project = () => {
           &larr; Go back
         </Link>
         <div className="header__img">
-          <img src="/images/whatsapp.jpg" alt="whastapp" />
+          <img src={project?.mainImage.asset.url} alt={project?.title} />
         </div>
         <div className="project__details">
-          <h1>WhatsApp Clone</h1>
-          <a href="">Live Demo</a>
-          <a href="">View on GitHub</a>
+          <h1>{project?.title}</h1>
+
+          <div className="project__authorDetails">
+            <div className="author">
+              <img
+                src={project?.author.image.asset.url}
+                alt={project?.author.name}
+              />
+              <h5>
+                <span>{project?.author.name}</span> on{" "}
+                {dateformat(project?.publishedAt, "dddd, mmmm dS, yyyy")}
+              </h5>
+            </div>
+          </div>
+          <div className="project__urls">
+            <a
+              href={project?.live_url}
+              className="project__url"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live Demo
+            </a>
+            <a
+              href={project?.github_url}
+              className="project__url"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View on GitHub
+            </a>
+          </div>
+          <hr />
           <div className="project__blockContent">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              voluptate id tempore, consequuntur reprehenderit debitis sapiente!
-              Magnam placeat iure iste neque culpa voluptas, inventore sapiente
-              harum perspiciatis eos, molestias quam.
-            </p>
+            <BlockContent
+              blocks={project?.body}
+              projectId="izpqy9cv"
+              dataset="production"
+            />
           </div>
         </div>
       </div>

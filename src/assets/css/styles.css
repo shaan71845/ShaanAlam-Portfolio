@@ -545,15 +545,19 @@ nav .container ul a:hover {
   }
 }
 
-.project__page .project__details a {
+.project__page .project__details .project__urls {
+  margin-top: 2.5rem;
+}
+
+.project__page .project__details .project__url {
   color: #121925;
   font-family: "Raleway", sans-serif;
-  margin-right: 12px;
   font-weight: 400;
+  margin-right: 12px;
 }
 
 @media screen and (max-width: 580px) {
-  .project__page .project__details a {
+  .project__page .project__details .project__url {
     display: block;
     margin: 1rem 0;
     font-size: small;
@@ -567,11 +571,53 @@ nav .container ul a:hover {
   line-height: 1.6;
 }
 
+.project__page .project__details figure img {
+  width: 100%;
+}
+
+.project__page .project__details h2,
+.project__page .project__details h3 {
+  margin: 0.7rem 0;
+  display: block;
+}
+
 @media screen and (max-width: 580px) {
   .project__page .project__details {
     padding: 2rem;
     width: 100%;
     margin: 0;
   }
+}
+
+.project__page .project__authorDetails {
+  margin: 1rem 0;
+}
+
+.project__page .project__authorDetails .author {
+  display: flex;
+  align-items: center;
+}
+
+.project__page .project__authorDetails .author img {
+  margin-right: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+.project__page .project__authorDetails .author h5 {
+  font-weight: normal;
+  color: gray;
+  font-family: "Raleway", sans-serif;
+}
+
+.project__page .project__authorDetails .author h5 span {
+  color: #333;
+}
+
+.project__page hr {
+  height: 1px;
+  margin-top: 1rem;
+  color: rgba(0, 0, 0, 0.3);
 }
 /*# sourceMappingURL=styles.css.map */
