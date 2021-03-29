@@ -487,4 +487,91 @@ nav .container ul a:hover {
 .projects .project:hover {
   transform: scale(1.051);
 }
+
+.project__page {
+  height: auto;
+  width: 100%;
+}
+
+.project__page .container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 4rem 0;
+}
+
+.project__page .back__btn {
+  color: #121925;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+@media screen and (max-width: 580px) {
+  .project__page .back__btn {
+    font-size: small;
+  }
+}
+
+.project__page .header__img {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.project__page .header__img img {
+  width: 100%;
+}
+
+.project__page .project__details {
+  width: 80%;
+  margin: -4rem auto;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 2px 4px 10px rgba(18, 25, 37, 0.32);
+  padding: 2rem 4rem;
+}
+
+.project__page .project__details h1 {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  color: #121925;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 580px) {
+  .project__page .project__details h1 {
+    font-size: 1.3rem;
+  }
+}
+
+.project__page .project__details a {
+  color: #121925;
+  font-family: "Raleway", sans-serif;
+  margin-right: 12px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 580px) {
+  .project__page .project__details a {
+    display: block;
+    margin: 1rem 0;
+    font-size: small;
+  }
+}
+
+.project__page .project__details .project__blockContent {
+  margin: 2rem 0;
+  font-family: "Raleway", sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 580px) {
+  .project__page .project__details {
+    padding: 2rem;
+    width: 100%;
+    margin: 0;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,80 @@
+.project__page {
+  height: auto;
+  width: 100%;
+
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 0;
+  }
+
+  .back__btn {
+    color: $primary-color;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-family: $font-raleway;
+
+    // Back btn media queries
+    @include small {
+      font-size: small;
+    }
+  }
+
+  .header__img {
+    margin-top: 1rem;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .project__details {
+    width: 80%;
+    margin: -4rem auto;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 2px 4px 10px rgba($primary-color, 0.32);
+    padding: 2rem 4rem;
+
+    h1 {
+      font-family: $font-noto;
+      font-style: italic;
+      color: $primary-color;
+      margin-bottom: 1rem;
+
+      @include small {
+        font-size: 1.3rem;
+      }
+    }
+
+    a {
+      color: $primary-color;
+      font-family: $font-raleway;
+      margin-right: 12px;
+      font-weight: 400;
+
+      @include small {
+        display: block;
+        margin: 1rem 0;
+        font-size: small;
+      }
+    }
+
+    .project__blockContent {
+      margin: 2rem 0;
+      font-family: $font-raleway;
+      color: rgba(0, 0, 0, 0.8);
+      line-height: 1.6;
+    }
+
+    // Media queries for .project__details
+    @include small {
+      padding: 2rem;
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

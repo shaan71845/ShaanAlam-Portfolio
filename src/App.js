@@ -6,7 +6,7 @@ import Project from "./components/Project";
 const App = () => {
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/project/:slug/" component={Project} />
