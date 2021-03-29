@@ -1,0 +1,65 @@
+.projects {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin-top: 6rem;
+    font-family: $font-noto;
+    color: $primary-color;
+    font-style: italic;
+    font-size: 2rem;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .projects__grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  .project {
+    position: relative;
+
+    // Project sample image
+    img {
+      width: 100%;
+    }
+
+    // Project details on hover
+    .project__details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        to bottom right,
+        $primary-color,
+        lighten($primary-color, 20%)
+      );
+      color: #fff;
+      font-family: $font-raleway;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      transition: all 0.4s;
+    }
+
+    &:hover .project__details {
+      opacity: 0.7;
+    }
+  }
+}
