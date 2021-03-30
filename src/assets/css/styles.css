@@ -648,4 +648,75 @@ nav .container ul a:hover {
   margin-top: 1rem;
   color: rgba(0, 0, 0, 0.3);
 }
+
+.blog__posts {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+}
+
+.blog__posts .container {
+  padding: 3rem 0rem;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.blog__posts h1 {
+  color: #121925;
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.blog__posts .blog__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-items: center;
+  grid-gap: 1rem;
+  margin: 3rem 0;
+}
+
+.blog__posts .blog {
+  transition: all 0.4s;
+  border-radius: 8px;
+  box-shadow: 5px 10px 30px rgba(18, 25, 37, 0.175);
+  max-width: 400px;
+}
+
+.blog__posts .blog .blog__coverImg {
+  margin-bottom: 1rem;
+}
+
+.blog__posts .blog .blog__coverImg img {
+  width: 100%;
+}
+
+.blog__posts .blog .blog__description {
+  padding: 0 1.5rem;
+}
+
+.blog__posts .blog .blog__description h4 {
+  color: #121925;
+  font-family: "Raleway", sans-serif;
+}
+
+.blog__posts .blog .blog__desctiption__userDetails {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.blog__posts .blog .blog__desctiption__userDetails img {
+  margin-right: 12px;
+  width: 8%;
+  border-radius: 100%;
+}
+
+.blog__posts .blog .blog__desctiption__userDetails p {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.8rem;
+  font-family: "Raleway", sans-serif;
+}
 /*# sourceMappingURL=styles.css.map */
