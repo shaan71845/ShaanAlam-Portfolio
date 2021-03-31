@@ -16,13 +16,13 @@ const AboutMe = () => {
             </Fade>
             <Fade left>
               <>
-                {state && state.author !== undefined && (
+                {state && state.author !== undefined ? (
                   <BlockContent
                     blocks={state?.author.about}
-                    projectId="izpqy9cv"
-                    dataset="production"
+                    projectId={process.env.REACT_APP_PROJECT_ID}
+                    dataset={process.env.REACT_APP_DATASET}
                   />
-                )}
+                ) : null}
               </>
             </Fade>
           </div>
