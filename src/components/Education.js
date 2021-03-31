@@ -1,3 +1,5 @@
+import Fade from "react-reveal/Fade";
+
 const Education = () => {
   return (
     <section className="education">
@@ -13,11 +15,15 @@ const Education = () => {
 
           <div className="content">
             <div className="content__heading">
-              <h2>
-                Shivaji College, University Of Delhi - BSc. Physical Science
-                with Computer Science
-              </h2>
-              <p>11/2020 - Present</p>
+              <Fade bottom>
+                <h2>
+                  Shivaji College, University Of Delhi - BSc. Physical Science
+                  with Computer Science
+                </h2>
+              </Fade>
+              <Fade top>
+                <p>11/2020 - Present</p>
+              </Fade>
             </div>
           </div>
         </div>
@@ -29,8 +35,12 @@ const Education = () => {
 
           <div className="content">
             <div className="content__heading">
-              <h2>St.Basil’sSchool,Basti —Science(PCM)</h2>
-              <p>2004-05 - 2020</p>
+              <Fade bottom>
+                <h2>St.Basil’sSchool,Basti —Science(PCM)</h2>
+              </Fade>
+              <Fade top>
+                <p>2004-05 - 2020</p>
+              </Fade>
             </div>
           </div>
         </div>

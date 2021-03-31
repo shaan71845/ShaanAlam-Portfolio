@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import emailjs, { init } from "emailjs-com";
+import Fade from "react-reveal/Fade";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -51,44 +52,56 @@ const Contact = () => {
       {errorMsg && <div className="error__msg">{errorMsg}</div>}
       <div className="contact__container">
         <div className="contact__containerHeading">
-          <h2>Wanna work togther??</h2>
-          <p>Contact me...</p>
+          <Fade>
+            <h2>Wanna work togther??</h2>
+          </Fade>
+          <Fade>
+            <p>Contact me...</p>
+          </Fade>
         </div>
         <form onSubmit={handleEmail}>
-          <div className="form__field">
-            <input
-              type="email"
-              id="Email"
-              name="from_name"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <label htmlFor="Email">Your Email</label>
-          </div>
-          <div className="form__field">
-            <input
-              type="text"
-              id="Subject"
-              name="subject"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              required
-            />
-            <label htmlFor="Subject">Subject</label>
-          </div>
-          <div className="form__field">
-            <textarea
-              type="email"
-              id="Message"
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-              placeholder="Your Message"
-            />
-          </div>
-          <button className="btn__primary">Send</button>
+          <Fade>
+            <div className="form__field">
+              <input
+                type="email"
+                id="Email"
+                name="from_name"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <label htmlFor="Email">Your Email</label>
+            </div>
+          </Fade>
+          <Fade>
+            <div className="form__field">
+              <input
+                type="text"
+                id="Subject"
+                name="subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                required
+              />
+              <label htmlFor="Subject">Subject</label>
+            </div>
+          </Fade>
+          <Fade>
+            <div className="form__field">
+              <textarea
+                type="email"
+                id="Message"
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+                placeholder="Your Message"
+              />
+            </div>
+          </Fade>
+          <Fade>
+            <button className="btn__primary">Send</button>
+          </Fade>
         </form>
       </div>
     </section>

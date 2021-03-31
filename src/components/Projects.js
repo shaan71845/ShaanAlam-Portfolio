@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import ProjectItem from "./ProjectItem";
 import { Context } from "../Context/GlobalState";
+import Fade from "react-reveal/Fade";
 
 const Projects = () => {
   const { state } = useContext(Context);
@@ -8,7 +9,9 @@ const Projects = () => {
 
   return (
     <section className="projects" id="projects">
-      <h1>My Latest Projects</h1>
+      <Fade top>
+        <h1>My Latest Projects</h1>
+      </Fade>
       <div className="container">
         <div className="projects__grid">
           {state &&
