@@ -13,7 +13,7 @@ const BlogPosts = () => {
           {state &&
             state.blog_posts &&
             state.blog_posts.map((blog) => (
-              <Blog blog={blog} userImg={state.author.image.asset.url} key={blog.slug} />
+              <Blog blog={blog} key={blog.slug} />
             ))}
         </div>
       </div>

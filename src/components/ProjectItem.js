@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Img } from "react-image";
+import LinearProgress from "@material-ui/core/LinearProgress";
 
 const ProjectItem = ({ project }) => {
   return (
@@ -7,7 +9,11 @@ const ProjectItem = ({ project }) => {
         <div className="project__details">
           <h3 className="project__title">{project.title}</h3>
         </div>
-        <img src={project.mainImage.asset.url} alt={project.title} />
+        <Img
+          src={project.mainImage.asset.url}
+          alt={project.title}
+          loader={<LinearProgress />}
+        />
       </div>
     </Link>
   );

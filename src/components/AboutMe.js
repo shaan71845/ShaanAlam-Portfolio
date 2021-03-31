@@ -30,7 +30,7 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="aboutme__rightContainer">
-          <img src={state?.author.image.asset.url} alt="Shaan Alam" />
+          <img src="images/me.png" alt="Shaan Alam" />
         </div>
       </div>
     </section>

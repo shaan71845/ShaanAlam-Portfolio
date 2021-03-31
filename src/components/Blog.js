@@ -1,26 +1,25 @@
 import dateformat from "dateformat";
+import { motion } from "framer-motion";
 
-const Blog = ({ blog, userImg }) => {
+const Blog = ({ blog }) => {
   return (
     <a href={blog.url} target="_blank" rel="noreferrer" className="blog__link">
-      <div className="blog">
+      <motion.div className="blog" whileHover={{ scale: 1.1 }}>
         <div className="blog__coverImg">
           <img src={blog.cover_image} alt="cover" />
         </div>
         <div className="blog__description">
-          <h4>
-            Setup your ReactJS + Tailwind CSS Project by creating a template 🔥
-          </h4>
+          <h4>{blog.title}</h4>
 
           <div className="blog__desctiption__userDetails">
-            <img src={userImg} alt="Shaan Alam" />
+            <img src="/images/me.png" alt="Shaan Alam" />
             <p>
               {blog.name} on{" "}
               {dateformat(blog.published_timestamp, "dddd, mmmm dS, yyyy")}
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </a>
   );
 };

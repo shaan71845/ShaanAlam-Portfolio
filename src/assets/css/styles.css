@@ -649,6 +649,14 @@ nav .container ul a:hover {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.project__loader {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .blog__posts {
   height: 100vh;
   width: 100%;
@@ -700,11 +708,6 @@ nav .container ul a:hover {
   border-radius: 8px;
   box-shadow: 5px 5px 30px rgba(18, 25, 37, 0.0915);
   max-width: 400px;
-}
-
-.blog__posts .blog:hover {
-  transform: scale(1.1);
-  box-shadow: 5px 5px 40px rgba(18, 25, 37, 0.1);
 }
 
 .blog__posts .blog .blog__coverImg {
