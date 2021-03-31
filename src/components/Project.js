@@ -39,7 +39,7 @@ const Project = () => {
         console.log(data[0]);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [slug]);
 
   return (
     <motion.section
