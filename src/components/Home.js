@@ -5,10 +5,15 @@ import Projects from "./Projects";
 import BlogPosts from "./BlogPosts";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <HeroSection />
       <AboutMe />
       <Education />
@@ -16,7 +21,7 @@ const Home = () => {
       <BlogPosts />
       <Contact />
       <Footer />
-    </>
+    </motion.div>
   );
 };
 
