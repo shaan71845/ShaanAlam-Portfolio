@@ -77,20 +77,60 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+@media screen and (max-width: 580px) {
+  .hero__section header h4 {
+    text-align: center;
+  }
+}
+
 .hero__section header h1 {
   color: #121925;
   font-family: "Noto Serif", serif;
   font-size: 3.5rem;
 }
 
+@media screen and (max-width: 580px) {
+  .hero__section header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+
 .hero__section header p {
   color: #33476a;
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
   width: 50%;
   line-height: 1.6;
 }
 
+@media screen and (max-width: 900px) {
+  .hero__section header p {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__section header p {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .hero__section header p {
+    text-align: center;
+    width: 100%;
+  }
+}
+
 .hero__section .hero__actions {
   margin-top: 2rem;
+}
+
+@media screen and (max-width: 580px) {
+  .hero__section .hero__actions {
+    margin: 1rem auto;
+  }
 }
 
 .hero__section .hero__actions a {
