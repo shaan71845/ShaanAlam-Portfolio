@@ -3,6 +3,7 @@ import emailjs, { init } from "emailjs-com";
 import Fade from "react-reveal/Fade";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import CancelIcon from "@material-ui/icons/Cancel";
+import EmailIcon from "@material-ui/icons/Email";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -111,7 +112,9 @@ const Contact = () => {
             </div>
           </Fade>
           <Fade>
-            <button className="btn__primary">Send</button>
+            <button className="btn__primary">
+              <EmailIcon /> Send
+            </button>
           </Fade>
         </form>
       </div>

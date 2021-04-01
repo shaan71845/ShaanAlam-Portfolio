@@ -31,4 +31,9 @@
   &:hover::before {
     width: 100%;
   }
+
+  // If the button has any SVG, then vertically align it in the middle
+  svg {
+    vertical-align: middle;
+  }
 }

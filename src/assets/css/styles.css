@@ -54,6 +54,10 @@ body {
   width: 100%;
 }
 
+.btn__primary svg {
+  vertical-align: middle;
+}
+
 .hero__section {
   height: 100vh;
   width: 100%;
