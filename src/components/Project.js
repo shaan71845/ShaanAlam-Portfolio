@@ -43,9 +43,9 @@ const Project = () => {
   return (
     <motion.section
       className="project__page"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ scale: 0.8, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      exit={{ scale: 0.8, opacity: 0 }}
       transition={{ delay: 1, type: "tween" }}
     >
       <div className="container">

@@ -24,7 +24,7 @@ const HeroSection = () => {
           <Fade top>
             <div className="hero__actions">
               <a href="#projects" className="btn__primary">
-                Projects
+                My Projects
               </a>
               <a
                 href="https://github.com/shaan71845/python_notes/files/6216889/CV.Shaan.Alam.pdf"
