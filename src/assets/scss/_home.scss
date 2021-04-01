@@ -1,79 +1,128 @@
-.home {
+// .home {
+//   height: 100vh;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+
+//   .container {
+//     padding: 2rem;
+//     width: 70%;
+//     margin: auto;
+//     overflow: hidden;
+//     text-align: center;
+
+//     @include large {
+//       width: 80%;
+//     }
+
+//     @include small {
+//       medium {
+//         width: 100%;
+//       }
+//     }
+
+//     // My avatar
+//     img {
+//       height: 200px;
+//       width: 200px;
+//       border-radius: 100%;
+//       object-fit: cover;
+
+//       @include small {
+//         width: 120px;
+//         height: 120px;
+//       }
+//     }
+
+//     p {
+//       color: rgba(0, 0, 0, 0.6);
+//       line-height: 1.8;
+//       font-family: $font-raleway;
+
+//       @include small {
+//         font-size: small;
+//       }
+//     }
+
+//     // My name
+//     .home__myName {
+//       font-family: $font-noto;
+//       font-weight: bold;
+//       font-style: italic;
+//       color: $primary-color;
+//       margin-top: 20px;
+//       font-size: 2rem;
+
+//       @include small {
+//         font-size: 1.5rem;
+//         margin-bottom: 1rem;
+//       }
+//     }
+
+//     // Home action buttons
+//     .home__actions {
+//       text-align: center;
+//       margin: 2rem auto;
+
+//       a {
+//         @include small {
+//           margin: 10px 0;
+//           display: block;
+//         }
+
+//         margin-right: 10px;
+//       }
+//     }
+//   }
+// }
+
+.hero__section {
   height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+  // Container for hero section
 
   .container {
-    padding: 2rem;
-    width: 70%;
-    margin: auto;
+    width: 80%;
+    margin: -3rem auto 0 auto;
     overflow: hidden;
-    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    @include large {
-      width: 80%;
+  // Header in hero section
+
+  header {
+    margin: 0 0 2rem 0;
+    h4 {
+      color: lighten($primary-color, 10%);
+      font-family: $font-raleway;
     }
 
-    @include small {
-      medium {
-        width: 100%;
-      }
-    }
-
-    // My avatar
-    img {
-      height: 200px;
-      width: 200px;
-      border-radius: 100%;
-      object-fit: cover;
-
-      @include small {
-        width: 120px;
-        height: 120px;
-      }
+    h1 {
+      color: $primary-color;
+      font-family: $font-noto;
+      font-size: 3.5rem;
     }
 
     p {
-      color: rgba(0, 0, 0, 0.6);
-      line-height: 1.8;
-      font-family: $font-raleway;
-
-      @include small {
-        font-size: small;
-      }
+      color: lighten($primary-color, 20%);
+      width: 50%;
+      line-height: 1.6;
     }
+  }
 
-    // My name
-    .home__myName {
-      font-family: $font-noto;
-      font-weight: bold;
-      font-style: italic;
-      color: $primary-color;
-      margin-top: 20px;
-      font-size: 2rem;
+  // CTA section
+  .hero__actions {
+    margin-top: 2rem;
+  }
 
-      @include small {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-      }
-    }
-
-    // Home action buttons
-    .home__actions {
-      text-align: center;
-      margin: 2rem auto;
-
-      a {
-        @include small {
-          margin: 10px 0;
-          display: block;
-        }
-
-        margin-right: 10px;
-      }
-    }
+  // CTA buttons in hero section
+  .hero__actions a {
+    margin-right: 12px;
   }
 }
