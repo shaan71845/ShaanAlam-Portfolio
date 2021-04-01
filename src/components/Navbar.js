@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -15,18 +16,24 @@ const Navbar = () => {
         </div>
         <ul className={`${navOpen ? "visible" : ""}`}>
           <li onClick={() => setNavOpen(false)}>
-            <a href="#home" className="active">
+            <Link to="home" smooth={true} duration={1000}>
               Home
-            </a>
+            </Link>
           </li>
           <li onClick={() => setNavOpen(false)}>
-            <a href="#about-me">About me</a>
+            <Link to="about-me" smooth={true} duration={1000}>
+              About me
+            </Link>
           </li>
           <li onClick={() => setNavOpen(false)}>
-            <a href="#projects">Projects</a>
+            <Link to="projects" smooth={true} duration={1000}>
+              Projects
+            </Link>
           </li>
           <li onClick={() => setNavOpen(false)}>
-            <a href="#contactme">Contact me</a>
+            <Link to="contactme" smooth={true} duration={1000}>
+              Contact me
+            </Link>
           </li>
         </ul>
       </div>

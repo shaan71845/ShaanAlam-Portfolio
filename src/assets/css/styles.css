@@ -204,7 +204,12 @@ nav .container ul {
   justify-content: space-around;
 }
 
+nav .container ul li .active {
+  color: #151e2c;
+}
+
 nav .container ul a {
+  cursor: pointer;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
