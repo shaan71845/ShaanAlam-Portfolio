@@ -368,11 +368,12 @@ nav .container ul a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to bottom right, #233047, black);
 }
 
 .education h1 {
   font-family: "Noto Serif", serif;
-  color: #121925;
+  color: #fff;
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -384,7 +385,13 @@ nav .container ul a:hover {
 }
 
 .education .container {
-  width: 40%;
+  width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .education .container {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -404,7 +411,7 @@ nav .container ul a:hover {
 }
 
 .education .v-stepper {
-  z-index: -1;
+  z-index: 1;
   position: relative;
   /*   visibility: visible; */
 }
@@ -418,19 +425,18 @@ nav .container ul a:hover {
 }
 
 .education .step.completed .circle {
-  background-color: white;
-  border: 3px solid #fff;
+  border: 3px solid #121925;
   border-radius: 100%;
   width: 20px;
   /* +6 for border */
   height: 20px;
   display: inline-block;
   visibility: visible;
-  background-color: #233047;
+  background-color: #fff;
 }
 
 .education .step.completed .line {
-  border-left: 2px solid rgba(0, 0, 0, 0.4);
+  border-left: 2px solid #fff;
 }
 
 .education .content {
@@ -439,7 +445,7 @@ nav .container ul a:hover {
 }
 
 .step .content .content__heading h2 {
-  color: #121925;
+  color: #fff;
   font-family: "Raleway", sans-serif;
   font-size: 1.3rem;
   margin-bottom: 0.7rem;
@@ -452,7 +458,7 @@ nav .container ul a:hover {
 }
 
 .step .content .content__heading p {
-  color: rgba(0, 0, 0, 0.6);
+  color: #ddd;
   font-family: "Raleway", sans-serif;
 }
 
