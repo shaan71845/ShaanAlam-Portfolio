@@ -830,7 +830,6 @@ nav .container ul a:hover {
 
 .blog__posts .blog {
   transition: all 0.4s;
-  border-radius: 8px;
   box-shadow: 5px 5px 30px rgba(21, 30, 44, 0.0915);
   max-width: 400px;
 }
