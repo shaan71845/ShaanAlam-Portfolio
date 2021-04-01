@@ -95,6 +95,12 @@ body {
   transform: scale(1.4);
 }
 
+@media screen and (max-width: 580px) {
+  .hero__section .social-icons a svg {
+    transform: scale(1);
+  }
+}
+
 .hero__section .social-icons a:hover {
   color: #151e2c;
 }
@@ -166,6 +172,8 @@ body {
 
 @media screen and (max-width: 580px) {
   .hero__section .hero__actions {
+    display: flex !important;
+    justify-content: center !important;
     margin: 1rem auto;
   }
 }

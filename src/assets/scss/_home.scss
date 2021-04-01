@@ -31,6 +31,10 @@
 
       svg {
         transform: scale(1.4);
+
+        @include small {
+          transform: scale(1);
+        }
       }
 
       &:hover {
@@ -94,6 +98,8 @@
     margin-top: 2rem;
 
     @include small {
+      display: flex !important;
+      justify-content: center !important;
       margin: 1rem auto;
     }
   }
