@@ -721,9 +721,10 @@ nav .container ul a:hover {
 }
 
 .blog__posts {
-  height: 80vh;
+  height: auto;
   width: 100%;
   display: flex;
+  margin: 2rem 0;
 }
 
 .blog__posts .container {
@@ -891,7 +892,7 @@ nav .container ul a:hover {
   margin-top: 3rem;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 768px) {
   .contact__container form {
     width: 90%;
   }
