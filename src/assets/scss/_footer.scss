@@ -1,5 +1,9 @@
 footer {
-  background: $primary-color;
+  background: linear-gradient(
+    to bottom right,
+    lighten($primary-color, 10%),
+    darken($primary-color, 20%)
+  );
   font-family: $font-raleway;
   color: #fff;
 

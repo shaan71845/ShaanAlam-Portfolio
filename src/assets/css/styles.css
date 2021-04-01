@@ -1070,7 +1070,7 @@ nav .container ul a:hover {
 }
 
 footer {
-  background: #151e2c;
+  background: linear-gradient(to bottom right, #25364f, black);
   font-family: "Raleway", sans-serif;
   color: #fff;
 }
