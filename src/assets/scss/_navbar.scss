@@ -38,31 +38,50 @@ nav {
 
       ul {
         display: flex;
-        height: 0vh;
-        width: 100%;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         position: absolute;
-        top: -100%;
+        top: 90%;
         left: 0%;
         right: 0;
-        background-color: $primary-color;
+        background-color: #fff;
         z-index: 3;
-        transition: all 0.4s;
-
-        &.visible {
-          padding: 6rem 0;
-          position: absolute;
-          top: 0%;
-          height: 100vh;
-        }
+        clip-path: circle(0 at 90% -100%);
+        -webkit-clip-path: circle(0 at 90% -100%);
+        transition: all 0.8s ease-in;
+        height: 100vh;
+        width: 100%;
 
         a {
           color: #fff;
+        }
 
-          &:hover {
-            color: #fff;
+        &.visible {
+          clip-path: circle(1000px at 90% 100%);
+          -webkit-clip-path: circle(1000px at 90% 100%);
+          padding: 6rem 0;
+          position: absolute;
+
+          a {
+            animation: fadeIn 1.4s ease-in-out;
+            color: $primary-color;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: -10px;
+              left: 0;
+              height: 2px;
+              width: 0%;
+              background: #fff;
+              transition: all 0.4s;
+            }
+
+            &:hover::before {
+              width: 100%;
+            }
           }
         }
       }
@@ -94,13 +113,13 @@ nav {
 
   &.cross {
     div:nth-child(1) {
-      background: #fff;
+      background: $primary-color;
       -webkit-transform: rotate(-45deg) translate(-5px, 5px);
       transform: rotate(-45deg) translate(-5px, 5px);
     }
 
     div:nth-child(2) {
-      background: #fff;
+      background: $primary-color;
       -webkit-transform: rotate(45deg) translate(0px, -3px);
       transform: rotate(45deg) translate(0, -3px);
     }
