@@ -4,6 +4,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import { Link } from "react-scroll";
 
 const HeroSection = () => {
   return (
@@ -27,9 +28,14 @@ const HeroSection = () => {
               </Fade>
               <Fade top>
                 <div className="hero__actions">
-                  <a href="#projects" className="btn__primary">
+                  <Link
+                    to="projects"
+                    className="btn__primary"
+                    smooth={true}
+                    duration={1000}
+                  >
                     My Projects
-                  </a>
+                  </Link>
                   <a
                     href="https://github.com/shaan71845/python_notes/files/6216889/CV.Shaan.Alam.pdf"
                     className="btn__primary"
