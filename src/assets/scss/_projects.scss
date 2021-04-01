@@ -40,46 +40,47 @@
     height: 300px;
     position: relative;
     transition: all 0.4s;
+    box-shadow: 5px 5px 30px rgba($primary-color, 0.15);
+    background: #fff;
+    text-decoration: none;
 
     // Project sample image
     img {
-      height: 100%;
       width: 100%;
-      position: relative;
       object-fit: cover;
     }
 
-    // Project details on hover
+    // Project details
     .project__details {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(
-        to bottom right,
-        $primary-color,
-        darken($primary-color, 20%)
-      );
-      color: #fff;
-      font-family: $font-raleway;
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-      transition: all 0.4s;
+      padding: 0.8rem;
 
-      a {
-        color: #fff;
-        margin-top: 1rem;
+      h4 {
+        color: $primary-color;
+        font-family: $font-raleway;
       }
     }
 
-    // Show .project__details on hover
-    &:hover .project__details {
-      opacity: 0.7;
+    // Project links
+    .project__links {
+      padding: 0 0 0.8rem 0.8rem;
+      font-size: small;
+
+      a {
+        cursor: pointer;
+        transition: all 0.4s;
+        font-family: $font-raleway;
+        margin-right: 12px;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.8);
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        svg {
+          vertical-align: middle;
+        }
+      }
     }
 
     // Scale project to 1.1x on hover

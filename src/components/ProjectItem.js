@@ -2,22 +2,46 @@ import { Link } from "react-router-dom";
 import { Img } from "react-image";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Fade from "react-reveal/Fade";
+import LinkIcon from "@material-ui/icons/Link";
+
+// const ProjectItem = ({ project }) => {
+//   return (
+//     <Fade bottom>
+//       <div className="project">
+//         <div className="project__details">
+//           <h3 className="project__title">{project.title}</h3>
+//           <Link to={`/project/${project.slug.current}`}>View</Link>
+//         </div>
+//         <Img
+//           src={project.mainImage.asset.url}
+//           alt={project.title}
+//           loader={<LinearProgress />}
+//         />
+//       </div>
+//     </Fade>
+//   );
+// };
 
 const ProjectItem = ({ project }) => {
   return (
-    <Fade bottom>
-      <div className="project">
-        <div className="project__details">
-          <h3 className="project__title">{project.title}</h3>
-          <Link to={`/project/${project.slug.current}`}>View</Link>
-        </div>
-        <Img
-          src={project.mainImage.asset.url}
-          alt={project.title}
-          loader={<LinearProgress />}
-        />
+    <div className="project">
+      <Img
+        src={project.mainImage.asset.url}
+        alt={project.title}
+        loader={<LinearProgress />}
+      />
+      <div className="project__details">
+        <h4 className="project__title">{project.title}</h4>
       </div>
-    </Fade>
+      <div className="project__links">
+        <a href={project.live_url} target="_blank" rel="noreferrer">
+          <LinkIcon /> Live Demo
+        </a>
+        <Link to={`/project/${project.slug.current}`}>
+          <LinkIcon /> View
+        </Link>
+      </div>
+    </div>
   );
 };
 

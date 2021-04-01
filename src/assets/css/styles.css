@@ -16,19 +16,20 @@ body {
 
 ::selection {
   color: #fff;
-  background-color: #5676ad;
+  background-color: #5c7db1;
 }
 
 .btn__primary {
   padding: 12px 16px;
   background: transparent;
-  color: #121925;
+  color: #151e2c;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
-  border: 2px solid #121925;
+  border: 2px solid #151e2c;
   transition: all 0.4s;
   box-shadow: 0 2px 20px rgba(18, 25, 37, 0.1);
   cursor: pointer;
+  font-weight: 600;
   position: relative;
 }
 
@@ -41,7 +42,7 @@ body {
   width: 0%;
   z-index: -1;
   transition: all 0.4s;
-  background: #121925;
+  background: #151e2c;
 }
 
 .btn__primary:hover {
@@ -73,7 +74,7 @@ body {
 }
 
 .hero__section header h4 {
-  color: #233047;
+  color: #25364f;
   font-family: "Raleway", sans-serif;
 }
 
@@ -84,7 +85,7 @@ body {
 }
 
 .hero__section header h1 {
-  color: #121925;
+  color: #151e2c;
   font-family: "Noto Serif", serif;
   font-size: 3.5rem;
 }
@@ -97,7 +98,7 @@ body {
 }
 
 .hero__section header p {
-  color: #33476a;
+  color: #364d71;
   font-family: "Raleway", sans-serif;
   font-weight: normal;
   width: 50%;
@@ -187,7 +188,7 @@ nav .container ul a:hover {
     top: -100%;
     left: 0%;
     right: 0;
-    background-color: #121925;
+    background-color: #151e2c;
     z-index: 3;
     transition: all 0.4s;
   }
@@ -223,7 +224,7 @@ nav .container ul a:hover {
 .nav__menuToggler div {
   width: 100%;
   height: 3px;
-  background-color: #121925;
+  background-color: #151e2c;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -281,7 +282,7 @@ nav .container ul a:hover {
 .aboutme__leftContainer .aboutme__text h1 {
   margin: 1rem 0;
   font-family: "Noto Serif", serif;
-  color: #121925;
+  color: #151e2c;
   font-size: 2rem;
 }
 
@@ -316,7 +317,7 @@ nav .container ul a:hover {
 .aboutme__leftContainer .aboutme__skills h4 {
   font-family: "Noto Serif", serif;
   font-size: 2rem;
-  color: #121925;
+  color: #151e2c;
   margin: 1rem 0;
 }
 
@@ -340,7 +341,7 @@ nav .container ul a:hover {
 .aboutme__rightContainer img {
   object-fit: cover;
   width: 70%;
-  box-shadow: 5px 10px 30px rgba(18, 25, 37, 0.275);
+  box-shadow: 5px 10px 30px rgba(21, 30, 44, 0.275);
 }
 
 @media screen and (max-width: 900px) {
@@ -368,7 +369,7 @@ nav .container ul a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom right, #233047, black);
+  background: linear-gradient(to bottom right, #25364f, black);
 }
 
 .education h1 {
@@ -425,7 +426,7 @@ nav .container ul a:hover {
 }
 
 .education .step.completed .circle {
-  border: 3px solid #121925;
+  border: 3px solid #151e2c;
   border-radius: 100%;
   width: 20px;
   /* +6 for border */
@@ -473,7 +474,7 @@ nav .container ul a:hover {
 .projects h1 {
   margin-top: 6rem;
   font-family: "Noto Serif", serif;
-  color: #121925;
+  color: #151e2c;
   font-size: 2rem;
 }
 
@@ -507,40 +508,45 @@ nav .container ul a:hover {
   height: 300px;
   position: relative;
   transition: all 0.4s;
+  box-shadow: 5px 5px 30px rgba(21, 30, 44, 0.15);
+  background: #fff;
+  text-decoration: none;
 }
 
 .projects .project img {
-  height: 100%;
   width: 100%;
-  position: relative;
   object-fit: cover;
 }
 
 .projects .project .project__details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to bottom right, #121925, black);
-  color: #fff;
+  padding: 0.8rem;
+}
+
+.projects .project .project__details h4 {
+  color: #151e2c;
   font-family: "Raleway", sans-serif;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
+}
+
+.projects .project .project__links {
+  padding: 0 0 0.8rem 0.8rem;
+  font-size: small;
+}
+
+.projects .project .project__links a {
+  cursor: pointer;
   transition: all 0.4s;
+  font-family: "Raleway", sans-serif;
+  margin-right: 12px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
 }
 
-.projects .project .project__details a {
-  color: #fff;
-  margin-top: 1rem;
+.projects .project .project__links a:hover {
+  text-decoration: underline;
 }
 
-.projects .project:hover .project__details {
-  opacity: 0.7;
+.projects .project .project__links a svg {
+  vertical-align: middle;
 }
 
 .projects .project:hover {
@@ -566,7 +572,7 @@ nav .container ul a:hover {
 }
 
 .project__page .back__btn {
-  color: #121925;
+  color: #151e2c;
   font-size: 1.3rem;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
@@ -603,7 +609,7 @@ nav .container ul a:hover {
   position: relative;
   z-index: 2;
   background: #fff;
-  box-shadow: 2px 4px 40px rgba(18, 25, 37, 0.112);
+  box-shadow: 2px 4px 40px rgba(21, 30, 44, 0.112);
   padding: 2rem 4rem;
   border-radius: 6px;
 }
@@ -611,7 +617,7 @@ nav .container ul a:hover {
 .project__page .project__details h1 {
   font-family: "Noto Serif", serif;
   font-style: italic;
-  color: #121925;
+  color: #151e2c;
   margin-bottom: 1rem;
 }
 
@@ -626,7 +632,7 @@ nav .container ul a:hover {
 }
 
 .project__page .project__details .project__url {
-  color: #121925;
+  color: #151e2c;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   margin-right: 12px;
@@ -658,7 +664,7 @@ nav .container ul a:hover {
 }
 
 .project__page .project__details a {
-  color: #121925;
+  color: #151e2c;
 }
 
 @media screen and (max-width: 580px) {
@@ -723,7 +729,7 @@ nav .container ul a:hover {
 }
 
 .blog__posts h1 {
-  color: #121925;
+  color: #151e2c;
   font-family: "Noto Serif", serif;
   font-size: 2rem;
   text-align: center;
@@ -757,7 +763,7 @@ nav .container ul a:hover {
 .blog__posts .blog {
   transition: all 0.4s;
   border-radius: 8px;
-  box-shadow: 5px 5px 30px rgba(18, 25, 37, 0.0915);
+  box-shadow: 5px 5px 30px rgba(21, 30, 44, 0.0915);
   max-width: 400px;
 }
 
@@ -774,7 +780,7 @@ nav .container ul a:hover {
 }
 
 .blog__posts .blog .blog__description h4 {
-  color: #121925;
+  color: #151e2c;
   font-family: "Raleway", sans-serif;
 }
 
@@ -822,13 +828,13 @@ nav .container ul a:hover {
   position: absolute;
   right: 10px;
   bottom: 10%;
-  background: #121925;
+  background: #151e2c;
   padding: 10px;
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-size: small;
   border-radius: 5px;
-  box-shadow: 0 4px 5px rgba(18, 25, 37, 0.23);
+  box-shadow: 0 4px 5px rgba(21, 30, 44, 0.23);
   animation: fadeIn 0.4s;
 }
 
@@ -860,7 +866,7 @@ nav .container ul a:hover {
 .contact .contact__containerHeading h2 {
   font-family: "Noto Serif", serif;
   font-size: 2rem;
-  color: #121925;
+  color: #151e2c;
 }
 
 @media screen and (max-width: 580px) {
@@ -922,7 +928,7 @@ nav .container ul a:hover {
 
 .contact__container form .form__field input:focus,
 .contact__container form .form__field textarea:focus {
-  border-bottom-color: #121925;
+  border-bottom-color: #151e2c;
 }
 
 .contact__container form .form__field input:focus,
@@ -953,7 +959,7 @@ nav .container ul a:hover {
 }
 
 footer {
-  background: #121925;
+  background: #151e2c;
   font-family: "Raleway", sans-serif;
   color: #fff;
 }
@@ -1000,7 +1006,7 @@ footer a:hover {
   padding: 10px;
   text-align: center;
   color: #fff;
-  background: #0a0d14;
+  background: #0d121b;
   margin: 1rem 0 0 0;
 }
 /*# sourceMappingURL=styles.css.map */

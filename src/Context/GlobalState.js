@@ -33,6 +33,7 @@ const Provider = ({ children }) => {
         `*[_type == 'project'] {
           title,
           slug,
+          live_url,
           mainImage {
             asset -> {
               url
