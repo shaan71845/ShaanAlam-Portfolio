@@ -5,7 +5,7 @@
   margin: 2rem 0;
 
   .container {
-    // padding: 3rem 0rem;
+    padding: 3rem 0rem;
     width: 80%;
     margin: auto;
     overflow: hidden;
@@ -42,7 +42,12 @@
   // Individual Blog
   .blog {
     transition: all 0.4s;
-    box-shadow: 5px 5px 30px rgba($primary-color, 0.0915);
+    box-shadow: 0 2.8px 2.2px rgba($primary-color, 0.008),
+      0 6.7px 5.3px rgba($primary-color, 0.012),
+      0 12.5px 10px rgba($primary-color, 0.015),
+      0 22.3px 17.9px rgba($primary-color, 0.018),
+      0 41.8px 33.4px rgba($primary-color, 0.022),
+      0 100px 80px rgba($primary-color, 0.03);
     max-width: 400px;
 
     // Blog cover image div

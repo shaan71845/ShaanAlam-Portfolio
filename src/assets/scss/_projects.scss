@@ -20,6 +20,7 @@
     width: 80%;
     margin: auto;
     overflow: hidden;
+    padding: 3rem 0;
   }
 
   .projects__grid {
@@ -45,7 +46,10 @@
     height: 300px;
     position: relative;
     transition: all 0.4s;
-    box-shadow: 5px 5px 30px rgba($primary-color, 0.0915);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.008),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.012), 0 12.5px 10px rgba(0, 0, 0, 0.015),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.018), 0 41.8px 33.4px rgba(0, 0, 0, 0.022),
+      0 100px 80px rgba(0, 0, 0, 0.03);
     background: #fff;
     text-decoration: none;
 
