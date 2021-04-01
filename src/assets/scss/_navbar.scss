@@ -60,7 +60,7 @@ nav {
         &.visible {
           clip-path: circle(1000px at 90% 100%);
           -webkit-clip-path: circle(1000px at 90% 100%);
-          padding: 6rem 0;
+          padding: 0 0 6rem 0;
           position: absolute;
 
           a {
