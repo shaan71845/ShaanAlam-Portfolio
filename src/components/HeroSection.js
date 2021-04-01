@@ -25,58 +25,63 @@ const HeroSection = () => {
                   using JavaScript. See some of my projects below!!
                 </p>
               </Fade>
+              <Fade top>
+                <div className="hero__actions">
+                  <a href="#projects" className="btn__primary">
+                    My Projects
+                  </a>
+                  <a
+                    href="https://github.com/shaan71845/python_notes/files/6216889/CV.Shaan.Alam.pdf"
+                    className="btn__primary"
+                  >
+                    Download CV
+                  </a>
+                </div>
+              </Fade>
             </header>
-            <Fade top>
-              <div className="hero__actions">
-                <a href="#projects" className="btn__primary">
-                  My Projects
-                </a>
+
+            <div className="social-icons">
+              <Fade>
                 <a
-                  href="https://github.com/shaan71845/python_notes/files/6216889/CV.Shaan.Alam.pdf"
-                  className="btn__primary"
+                  href="https://www.instagram.com/__shaanalam__/"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Download CV
+                  <InstagramIcon />
                 </a>
-              </div>
-            </Fade>
+              </Fade>
+              <Fade>
+                <a
+                  href="https://www.linkedin.com/in/shaan-alam-01784018a/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <LinkedInIcon />
+                </a>
+              </Fade>
+              <Fade>
+                <a
+                  href="https://twitter.com/shaancodes"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <TwitterIcon />
+                </a>
+              </Fade>
+              <Fade>
+                <a
+                  href="https://github.com/shaan71845"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <GitHubIcon />
+                </a>
+              </Fade>
+            </div>
           </main>
-          <div className="social-icons">
-            <Fade>
-              <a
-                href="https://www.instagram.com/__shaanalam__/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <InstagramIcon />
-              </a>
-            </Fade>
-            <Fade>
-              <a
-                href="https://www.linkedin.com/in/shaan-alam-01784018a/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <LinkedInIcon />
-              </a>
-            </Fade>
-            <Fade>
-              <a
-                href="https://twitter.com/shaancodes"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <TwitterIcon />
-              </a>
-            </Fade>
-            <Fade>
-              <a
-                href="https://github.com/shaan71845"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <GitHubIcon />
-              </a>
-            </Fade>
+          <div className="scroll__text">
+            <div className="line"></div>
+            <h3>Scroll Down</h3>
           </div>
         </div>
       </section>

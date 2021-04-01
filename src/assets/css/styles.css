@@ -64,13 +64,43 @@ body {
   overflow: hidden;
   height: 100%;
   display: flex;
+  justify-content: space-between;
+}
+
+.hero__section .container main {
+  height: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
+.hero__section .scroll__text {
+  position: relative;
+  flex: 1;
+}
+
+.hero__section .scroll__text .line {
+  height: 500px;
+  width: 2px;
+  background: #151e2c;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+
+.hero__section .scroll__text h3 {
+  position: absolute;
+  top: 40%;
+  left: -20%;
+  color: #151e2c;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
 .hero__section .social-icons {
   margin-left: 5px;
-  margin-top: -2rem;
   display: flex;
   justify-content: space-between;
   width: 25%;
@@ -174,13 +204,13 @@ body {
 }
 
 .hero__section .hero__actions {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 @media screen and (max-width: 580px) {
   .hero__section .hero__actions {
-    display: flex !important;
-    justify-content: center !important;
+    display: flex;
+    justify-content: center;
     margin: 1rem auto;
   }
 }
