@@ -43,10 +43,10 @@ const Project = () => {
   return (
     <motion.section
       className="project__page"
-      initial={{ scale: 0.8, opacity: 0 }}
+      initial={{ scale: 0.6, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0.8, opacity: 0 }}
-      transition={{ delay: 1, type: "tween" }}
+      transition={{ duration: 1 }}
+      exit={{ scale: 0.6, opacity: 0 }}
     >
       <div className="container">
         <Link to="/" className="back__btn">
