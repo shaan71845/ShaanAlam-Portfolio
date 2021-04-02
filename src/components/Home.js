@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import BlogPosts from "./BlogPosts";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Skills from "./Skills";
 import { motion } from "framer-motion";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
     >
       <HeroSection />
       <AboutMe />
+      <Skills />
       <Education />
       <Projects />
       <BlogPosts />

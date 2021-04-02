@@ -26,17 +26,6 @@ const AboutMe = () => {
               </>
             </Fade>
           </div>
-          <Fade bottom>
-            <div className="aboutme__skills">
-              <h4>Skills</h4>
-              <img src="/images/html.svg" alt="HTML5" />
-              <img src="/images/css.svg" alt="CSS3" />
-              <img src="/images/sass.svg" alt="Scss" />
-              <img src="/images/javascript.svg" alt="JavaScript" />
-              <img src="/images/react.svg" alt="ReactJS" />
-              <img src="/images/firebase.svg" alt="Firebase" />
-            </div>
-          </Fade>
         </div>
         <Fade right>
           <div className="aboutme__rightContainer">
