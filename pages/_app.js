@@ -54,6 +54,7 @@ const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb:hover {
     background: #444;
   }
+
 `;
 
 function MyApp({ Component, pageProps }) {

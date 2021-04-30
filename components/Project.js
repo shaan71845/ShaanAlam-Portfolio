@@ -6,22 +6,19 @@ import {
 } from "../styled-components/project";
 import { Play, LogoGithub } from "react-ionicons";
 
-const Project = () => {
+const Project = ({ project }) => {
   return (
     <ProjectContainer>
       <ProjectImage>
-        <img
-          src="https://cdn.sanity.io/images/izpqy9cv/production/51577cf63044f4b699fd1eb680d9c21e540f8d6f-1280x896.jpg"
-          alt="Project"
-        />
+        <img src={project.mainImage.asset.url} alt={project.title} />
       </ProjectImage>
       <ProjectDescription>
-        <h1>Instagram Clone</h1>
+        <h1>{project.title}</h1>
         <h4>ReactJS, Firebase, Material UI</h4>
-        <Link href="#!">
+        <Link href={project.live_link} target="_blank" rel="noreferrer">
           <Play /> Live Demo
         </Link>
-        <Link href="#!">
+        <Link href={project.github_link} target="_blank" rel="noreferrer">
           <LogoGithub /> GitHub Repo
         </Link>
       </ProjectDescription>

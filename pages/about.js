@@ -20,8 +20,10 @@ import {
   LogoFigma,
   LogoGithub,
 } from "react-ionicons";
+import BlockContent from "@sanity/block-content-to-react";
+import sanityClient from "../client";
 
-const about = () => {
+const about = ({ about }) => {
   return (
     <Section>
       <Container>
@@ -29,14 +31,11 @@ const about = () => {
         <Grid>
           <Col>
             <h1>About me</h1>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit ea
-              cupiditate modi illo cumque officia ex quos dolorum, vel in rerum
-              quia iusto maxime neque ab voluptatem repellat a. Dolores
-              architecto eius fuga esse reprehenderit adipisci corporis qui!
-              Tenetur quam nihil libero ut provident in voluptatibus! Tempora,
-              aliquam at. Voluptatem.
-            </p>
+            <BlockContent
+              blocks={about.bio[0]}
+              projectId={process.env.PROJECT_ID}
+              dataset={process.env.DATASET}
+            />
           </Col>
           <Col>
             <img
@@ -108,3 +107,21 @@ const about = () => {
 };
 
 export default about;
+
+export async function getStaticProps() {
+  const about = await sanityClient.fetch(`*[_type == "author"] {
+    name,
+    bio,
+    image {
+      asset -> {
+        url
+      }
+    }
+  }[0]`);
+
+  return {
+    props: {
+      about,
+    },
+  };
+}

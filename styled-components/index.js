@@ -6,22 +6,31 @@ export const HomeSection = styled.section`
   width: 100%;
   display: flex;
 
+  @media ${devices.tabletL} {
+    flex-direction: column-reverse;
+  }
+
   > div:nth-child(1) {
     padding: 10rem 6rem;
 
+    @media ${devices.tabletL} {
+      padding: 2rem 6rem;
+    }
+
     @media ${devices.tablet} {
-      padding: 10rem 2rem;
+      padding: 1rem;
     }
 
     h3,
     h1 {
       color: #fff;
       font-family: "Josefin Sans", sans-serif;
-      font-size: 150%;
+      font-size: 350%;
       margin-bottom: 10px;
 
       @media ${devices.tablet} {
         text-align: center;
+        font-size: 150%;
       }
 
       @media ${devices.mobileL} {
@@ -30,14 +39,14 @@ export const HomeSection = styled.section`
     }
 
     h1 {
-      font-size: 300%;
+      font-size: 400%;
 
       @media ${devices.tablet} {
         text-align: center;
       }
 
       @media ${devices.mobileL} {
-        font-size: 200%;
+        font-size: 150%;
       }
     }
 
@@ -66,16 +75,35 @@ export const HomeSection = styled.section`
     align-items: flex-end;
 
     @media ${devices.tabletL} {
-      display: none;
+      padding: 0 6rem;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+
+    @media ${devices.tablet} {
+      justify-content: center;
     }
 
     img {
       height: 90%;
       object-fit: contain;
 
-      @media ${devices.laptopL} {
-        width: 100%;
+      @media ${devices.tabletL} {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        object-fit: cover;
+        margin: 5rem 0;
       }
+
+      @media ${devices.mobileL} {
+        width: 100px;
+        height: 100px;
+      }
+
+      /* @media ${devices.laptopL} {
+        width: 100%;
+      } */
     }
   }
 `;
@@ -95,5 +123,25 @@ export const SocialIcons = styled.div`
   @media ${devices.tablet} {
     width: 80%;
     margin: 40px auto;
+  }
+`;
+
+export const Typing = styled.div`
+  h2 {
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: #aaa;
+    font-size: 250%;
+
+    @media ${devices.mobileL} {
+      font-size: 100%;
+    }
+
+    @media ${devices.tablet} {
+      text-align: center;
+    }
   }
 `;

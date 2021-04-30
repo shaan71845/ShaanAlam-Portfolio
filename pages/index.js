@@ -1,4 +1,10 @@
-import { HomeSection, Col, SocialIcons } from "../styled-components/index";
+import { useEffect, useRef } from "react";
+import {
+  HomeSection,
+  Col,
+  SocialIcons,
+  Typing,
+} from "../styled-components/index";
 import {
   LogoLinkedin,
   LogoInstagram,
@@ -6,22 +12,36 @@ import {
   LogoTwitter,
 } from "react-ionicons";
 import Sidebar from "../components/Sidebar";
+import sanityClient from "../client";
+import { init } from "ityped";
 
-const Home = () => {
+const Home = ({ about }) => {
+  const typingRef = useRef();
+
+  useEffect(() => {
+    init(typingRef.current, {
+      strings: [
+        "Frontend Developer",
+        "Web Designer",
+        "Problem Solver",
+        "Geek",
+        "React Lover ❤️",
+      ],
+    });
+  }, []);
+
   return (
     <HomeSection>
       <Col>
         <Sidebar />
         <h3>Hi there, I'm</h3>
         <h1>Shaan Alam</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
-          distinctio, recusandae earum consequatur explicabo vitae ea facere!
-          Repudiandae, sapiente ab doloribus, saepe nostrum mollitia, sit omnis
-          harum molestias illum voluptate asperiores? Accusantium vel
-          reprehenderit totam iure, accusamus mollitia ipsum beatae. Maiores
-          doloribus vel eum asperiores dolor ipsum deleniti reiciendis eveniet!
-        </p>
+        <Typing>
+          <h2>I am a</h2>
+          <h2>
+            <span ref={typingRef}></span>
+          </h2>
+        </Typing>
         <SocialIcons>
           <a href="#!">
             <LogoInstagram color="#FFF" />
@@ -38,13 +58,28 @@ const Home = () => {
         </SocialIcons>
       </Col>
       <Col>
-        <img
-          src="https://shaanalam.vercel.app/images/me.png"
-          alt="Shaan Alam"
-        />
+        <img src={about.image.asset.url} alt={about.name} />
       </Col>
     </HomeSection>
   );
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  const about = await sanityClient.fetch(`*[_type == "author"] {
+    name,
+    bio,
+    image {
+      asset -> {
+        url
+      }
+    }
+  }[0]`);
+
+  return {
+    props: {
+      about,
+    },
+  };
+}
