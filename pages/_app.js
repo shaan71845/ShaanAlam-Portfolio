@@ -73,14 +73,14 @@ function MyApp({ Component, pageProps, router }) {
           params={{
             particles: {
               number: {
-                value: 50,
+                value: 80,
               },
               size: {
                 value: 3,
                 random: true,
                 anim: {
                   enable: true,
-                  speed: 40,
+                  speed: 20,
                   size_min: 0.1,
                   sync: false,
                 },
@@ -90,7 +90,7 @@ function MyApp({ Component, pageProps, router }) {
                 random: false,
                 anim: {
                   enable: true,
-                  speed: 1,
+                  speed: 0.5,
                   opacity_min: 0.1,
                   sync: false,
                 },

@@ -69,6 +69,11 @@ export const Col = styled.div`
         border-radius: 100%;
         object-fit: cover;
       }
+
+      @media ${devices.mobileL} {
+        width: 100px;
+        height: 100px;
+      }
     }
   }
 `;
