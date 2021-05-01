@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { devices } from "../utils/utils";
+import { motion } from 'framer-motion';
 
-export const PostContainer = styled.div`
+export const PostContainer = styled(motion.div)`
   cursor: pointer;
   background: linear-gradient(to bottom right, #222, #111);
   transition: all 0.8s;

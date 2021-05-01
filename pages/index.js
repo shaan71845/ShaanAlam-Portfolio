@@ -14,6 +14,7 @@ import {
 import Sidebar from "../components/Sidebar";
 import sanityClient from "../client";
 import { init } from "ityped";
+import { motion } from "framer-motion";
 
 const Home = ({ about }) => {
   const typingRef = useRef();
@@ -34,15 +35,38 @@ const Home = ({ about }) => {
     <HomeSection>
       <Col>
         <Sidebar />
-        <h3>Hi there, I'm</h3>
-        <h1>Shaan Alam</h1>
-        <Typing>
+        <motion.h5
+          initial={{ opacity: 0, y: -30 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{ duration: 1, type: "tween" }}
+        >
+          Hi there, I'm
+        </motion.h5>
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          Shaan Alam
+        </motion.h1>
+        <Typing
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.5 }}
+        >
           <h2>I am a</h2>
           <h2>
             <span ref={typingRef}></span>
           </h2>
         </Typing>
-        <SocialIcons>
+        <SocialIcons
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
+        >
           <a href="#!">
             <LogoInstagram color="#FFF" />
           </a>
@@ -58,7 +82,13 @@ const Home = ({ about }) => {
         </SocialIcons>
       </Col>
       <Col>
-        <img src={about.image.asset.url} alt={about.name} />
+        <motion.img
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ type: "tween", duration: 2 }}
+          src={about.image.asset.url}
+          alt={about.name}
+        />
       </Col>
     </HomeSection>
   );

@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import Head from "next/head";
 import Particles from "react-particles-js";
-import { devices } from "../utils/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ParticlesContainer = styled.div`
   position: fixed;
@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
 
 `;
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <Head>
@@ -66,6 +66,7 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;500;600;900&display=swap"
         />
       </Head>
+
       <GlobalStyle />
       <ParticlesContainer>
         <Particles
@@ -98,7 +99,8 @@ function MyApp({ Component, pageProps }) {
           }}
         />
       </ParticlesContainer>
-      <Component {...pageProps} />
+
+      <Component {...pageProps} key={router.route} />
     </>
   );
 }

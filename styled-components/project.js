@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { devices } from "../utils/utils";
+import { motion } from "framer-motion";
 
-export const ProjectContainer = styled.div`
+export const ProjectContainer = styled(motion.div)`
   background: linear-gradient(to bottom right, #222, #111);
   transition: all 0.8s;
   border: 1px solid transparent;

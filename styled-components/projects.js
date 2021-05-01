@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const ProjectSection = styled.section`
   height: auto;
@@ -18,9 +19,9 @@ export const Container = styled.div`
   }
 `;
 
-export const ProjectGrid = styled.div`
+export const ProjectGrid = styled(motion.div)`
   margin: 30px 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 0.3rem;
+  grid-gap: 1rem;
 `;

@@ -6,9 +6,9 @@ import {
 } from "../styled-components/project";
 import { Play, LogoGithub } from "react-ionicons";
 
-const Project = ({ project }) => {
+const Project = ({ project, variants }) => {
   return (
-    <ProjectContainer>
+    <ProjectContainer variants={variants}>
       <ProjectImage>
         <img src={project.mainImage.asset.url} alt={project.title} />
       </ProjectImage>

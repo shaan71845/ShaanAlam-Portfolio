@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { devices } from "../utils/utils";
+import { motion } from "framer-motion";
 
 export const HomeSection = styled.section`
   min-height: 100vh;
@@ -21,11 +22,11 @@ export const HomeSection = styled.section`
       padding: 1rem;
     }
 
-    h3,
+    h5,
     h1 {
       color: #fff;
       font-family: "Josefin Sans", sans-serif;
-      font-size: 350%;
+      font-size: 200%;
       margin-bottom: 10px;
 
       @media ${devices.tablet} {
@@ -113,7 +114,7 @@ export const Col = styled.div`
   flex: 1;
 `;
 
-export const SocialIcons = styled.div`
+export const SocialIcons = styled(motion.div)`
   margin-top: 200px;
   display: flex;
   justify-content: space-between;
@@ -126,7 +127,7 @@ export const SocialIcons = styled.div`
   }
 `;
 
-export const Typing = styled.div`
+export const Typing = styled(motion.div)`
   h2 {
     font-weight: bold;
     margin-top: 20px;

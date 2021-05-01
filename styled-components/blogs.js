@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const BlogSection = styled.section`
   width: 100%;
@@ -16,7 +17,7 @@ export const Container = styled.div`
   }
 `;
 
-export const BlogGrid = styled.div`
+export const BlogGrid = styled(motion.div)`
   margin: 30px 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

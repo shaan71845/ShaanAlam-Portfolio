@@ -6,9 +6,9 @@ import {
   PostUser,
 } from "../styled-components/post";
 
-const Post = ({ post }) => {
+const Post = ({ post, variants }) => {
   return (
-    <PostContainer>
+    <PostContainer variants={variants}>
       <PostCoverImg>
         <img src={post.cover_image} alt="Post" />
       </PostCoverImg>
