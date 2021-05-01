@@ -1,28 +1,9 @@
-import {
-  Section,
-  Container,
-  Grid,
-  Col,
-  EducationContainer,
-  SkillsContainer,
-  Skills,
-  Skill,
-} from "../styled-components/about";
+import { Section, Container, Grid, Col } from "../styled-components/about";
 import Sidebar from "../components/Sidebar";
-import {
-  LogoHtml5,
-  LogoCss3,
-  LogoJavascript,
-  LogoPython,
-  LogoReact,
-  LogoFirebase,
-  LogoSass,
-  LogoFigma,
-  LogoGithub,
-} from "react-ionicons";
 import BlockContent from "@sanity/block-content-to-react";
 import sanityClient from "../client";
 import Education from "../components/Education";
+import Skills from "../components/Skills";
 
 const about = ({ about }) => {
   return (
@@ -46,45 +27,7 @@ const about = ({ about }) => {
           </Col>
         </Grid>
         <Education />
-        <SkillsContainer>
-          <h1>My Skills and tools</h1>
-          <Skills>
-            <Skill>
-              <h4>Markup / Styling Languages</h4>
-              <div>
-                <LogoHtml5 color="#fff" />
-                <LogoCss3 color="#fff" />
-                <LogoSass color="#fff" />
-              </div>
-            </Skill>
-            <Skill>
-              <h4>Programming Languages</h4>
-              <div>
-                <LogoJavascript color="#fff" />
-                <LogoPython color="#fff" />
-              </div>
-            </Skill>
-            <Skill>
-              <h4>Web Libraries / Framework</h4>
-              <div>
-                <LogoReact color="#fff" />
-                <LogoFirebase color="#fff" />
-              </div>
-            </Skill>
-            <Skill>
-              <h4>Design</h4>
-              <div>
-                <LogoFigma color="#fff" />
-              </div>
-            </Skill>
-            <Skill>
-              <h4>Version Control System</h4>
-              <div>
-                <LogoGithub color="#fff" />
-              </div>
-            </Skill>
-          </Skills>
-        </SkillsContainer>
+        <Skills />
       </Container>
     </Section>
   );
