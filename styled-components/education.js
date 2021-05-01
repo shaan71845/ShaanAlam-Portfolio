@@ -6,7 +6,7 @@ export const EducationContainer = styled.div`
 
   .education-grid {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
 
     @media ${devices.tabletL} {
       display: block;
@@ -30,7 +30,7 @@ export const EducationContainer = styled.div`
 
   .education {
     margin-right: 30px;
-    background: #222;
+    background: #111;
     width: 500px;
     padding: 2rem 4rem;
     margin: 30px auto;
