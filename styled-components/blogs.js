@@ -21,5 +21,5 @@ export const BlogGrid = styled(motion.div)`
   margin: 30px 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 0.3rem;
+  grid-gap: 1rem;
 `;
