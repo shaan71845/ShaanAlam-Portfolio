@@ -4,6 +4,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import sanityClient from "../client";
 import Education from "../components/Education";
 import Skills from "../components/Skills";
+import PreviousWorks from "../components/PreviousWorks";
 
 const about = ({ about }) => {
   return (
@@ -28,6 +29,7 @@ const about = ({ about }) => {
         </Grid>
         <Education />
         <Skills />
+        <PreviousWorks />
       </Container>
     </Section>
   );

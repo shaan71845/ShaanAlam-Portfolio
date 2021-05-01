@@ -1,40 +1,33 @@
 import styled from "styled-components";
 import { devices } from "../utils/utils";
 
-export const EducationContainer = styled.div`
-  margin-bottom: 100px;
-
-  @media ${devices.tablet} {
-    margin-top: 100px;
-  }
+export const PWContainer = styled.div`
+  margin: 100px 0;
 
   h1 {
     color: #fff;
-    font-family: "Josefin Sans", sans-serif;
     font-size: 200%;
     text-align: center;
+    margin: 30px 0;
+    font-family: "Josefin Sans", sans-serif;
 
     @media ${devices.mobileM} {
       font-size: 150%;
     }
   }
 
-  .education {
+  .experience {
     text-align: center;
-    margin: 30px 0;
-    color: #fff;
 
     h3 {
+      margin: 10px 0;
+      color: #fff;
       font-family: "Josefin Sans", sans-serif;
-      font-size: 1.5rem;
-
-      @media ${devices.mobileM} {
-        font-size: 1rem;
-      }
     }
 
     p {
-      margin-top: 10px;
+      margin: 10px 0;
+      color: #fff;
       font-family: "Raleway", sans-serif;
     }
   }
