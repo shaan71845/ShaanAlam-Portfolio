@@ -5,3 +5,4 @@ export default sanityClient({
   dataset: process.env.DATASET,
   useCdn: true,
 });
+
