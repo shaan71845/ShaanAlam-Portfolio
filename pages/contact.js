@@ -16,6 +16,7 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import Alert from "../components/Alert";
+import useTransition from '../Hooks/useTransition'
 
 const formVariants = {
   hidden: { opacity: 0, y: -30 },
@@ -67,7 +68,7 @@ const Contact = () => {
   };
 
   const [SlideIn, SlideOut] = useTransition();
-  
+
   return (
     <ContactSection>
       <Sidebar />
