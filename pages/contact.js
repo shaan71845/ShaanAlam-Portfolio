@@ -46,7 +46,6 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log(formRef.current);
 
     emailjs
       .sendForm(
@@ -70,6 +69,7 @@ const Contact = () => {
   const [SlideIn, SlideOut] = useTransition();
 
   return (
+    <>
     <ContactSection>
       <Sidebar />
       <motion.h1
@@ -141,6 +141,9 @@ const Contact = () => {
       </div>
       <AnimatePresence>{alert && <Alert text={alert} />}</AnimatePresence>
     </ContactSection>
+    <SlideIn />
+    <SlideOut />
+    </>
   );
 };
 

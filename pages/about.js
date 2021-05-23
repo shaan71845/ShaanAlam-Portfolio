@@ -6,8 +6,9 @@ import Education from "../components/Education";
 import Skills from "../components/Skills";
 import PreviousWorks from "../components/PreviousWorks";
 import { motion } from "framer-motion";
+import useTransition from "../Hooks/useTransition";
 
-const about = ({ about, experiences, education }) => {
+const About = ({ about, experiences, education }) => {
   const [SlideIn, SlideOut] = useTransition();
 
   return (
@@ -57,7 +58,8 @@ const about = ({ about, experiences, education }) => {
   );
 };
 
-export default about;
+export default About;
+Sl;
 
 export async function getStaticProps() {
   const about = await sanityClient.fetch(`*[_type == "author"] {

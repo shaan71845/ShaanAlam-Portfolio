@@ -2,6 +2,7 @@ import { BlogSection, Container, BlogGrid } from "../styled-components/blogs";
 import Sidebar from "../components/Sidebar";
 import Post from "../components/Post";
 import { motion } from "framer-motion";
+import useTransition from "../Hooks/useTransition";
 
 const blogGridVariants = {
   hidden: 0,
