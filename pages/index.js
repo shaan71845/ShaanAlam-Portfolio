@@ -15,10 +15,34 @@ const Home = () => {
     <main className={homeStyles.main}>
       <aside className={homeStyles["main-aside"]}>
         <div className={homeStyles["social-icons"]}>
-          <LogoInstagram />
-          <LogoGithub />
-          <LogoTwitter />
-          <LogoLinkedin />
+          <a
+            href="https://instagram.com/shaancodes"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LogoInstagram color="#303030" />
+          </a>
+          <a
+            href="https://github.com/shaan71845"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LogoGithub color="#303030" />
+          </a>
+          <a
+            href="https://twitter.com/shaancodes"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LogoTwitter color="#303030" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shaan-alam-01784018a/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LogoLinkedin color="#303030" />
+          </a>
         </div>
         <span></span>
       </aside>
