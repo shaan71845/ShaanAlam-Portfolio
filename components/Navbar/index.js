@@ -60,7 +60,11 @@ const Navbar = () => {
             </defs>
           </motion.svg>
         </Logo>
-        <Bars active={false} onClick={() => setIsMenu(!isMenu)} />
+        <Bars active={isMenu} onClick={() => setIsMenu(!isMenu)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </Bars>
       </Container>
       <AnimatePresence exitBeforeEnter>{isMenu && <Menu />}</AnimatePresence>
     </Nav>
