@@ -25,9 +25,6 @@ const menuVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      when: "beforeChildren",
-    },
   },
   exit: {
     y: "100%",
@@ -49,7 +46,7 @@ const Menu = () => {
             variants={menuLinkVariants}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
           >
             <Link href="/">Home</Link>
           </LinkContainerInner>
@@ -59,7 +56,7 @@ const Menu = () => {
             variants={menuLinkVariants}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
           >
             <Link href="/projects">Projects</Link>
           </LinkContainerInner>
@@ -69,7 +66,7 @@ const Menu = () => {
             variants={menuLinkVariants}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
           >
             <Link href="/blogs">Blogs</Link>
           </LinkContainerInner>
@@ -79,7 +76,7 @@ const Menu = () => {
             variants={menuLinkVariants}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
           >
             <Link href="/contact">Contact</Link>
           </LinkContainerInner>

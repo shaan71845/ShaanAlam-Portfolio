@@ -23,9 +23,8 @@ export const Bars = styled.a`
   position: relative;
   z-index: 3;
 
-  ::before {
-    content: "";
-    transition: all transform 0.4s ease-in-out;
+  span:nth-child(1) {
+    transition: transform 0.4s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,20 +33,33 @@ export const Bars = styled.a`
     height: 3px;
     width: 30px;
     transform: ${(props) => (props.active === true ? "rotate(45deg)" : "none")};
-    transform-origin: 0;
+    transform-origin: left center;
   }
 
-  ::after {
-    content: "";
+  span:nth-child(2) {
+    transition: transform 0.4s ease-in-out;
     position: absolute;
-    top: ${(props) => (props.active ? "15px" : "10px")};
+    top: 10px;
     left: 0;
+    margin: 10px 0;
+    background: #000;
+    height: 3px;
+    width: 30px;
+    transform: ${(props) => (props.active ? "scaleX(0)" : "scaleX(1)")};
+    transform-origin: center;
+  }
+
+  span:nth-child(3) {
+    transition: transform 0.4s ease-in-out;
+    position: absolute;
+    top: ${(props) => (props.active ? "20px" : "20px")};
+    left: ${(props) => (props.active ? "0px" : "0px")};
     margin: 10px 0;
     background: #000;
     height: 3px;
     width: 30px;
     transform: ${(props) =>
       props.active === true ? "rotate(-45deg)" : "none"};
-    transform-origin: center;
+    transform-origin: left center;
   }
 `;
