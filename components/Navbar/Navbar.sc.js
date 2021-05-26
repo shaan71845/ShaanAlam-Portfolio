@@ -14,12 +14,16 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
-export const Logo = styled.div``;
+export const Logo = styled.div`
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+`;
 
 export const Bars = styled.a`
   cursor: pointer;
   width: 30px;
-  height: 30px;
+  height: 40px;
   position: relative;
   z-index: 3;
 
