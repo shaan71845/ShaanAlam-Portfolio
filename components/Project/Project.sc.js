@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ProjectWrapper = styled.div`
-  height: 100vh;
-  place-items: center;
+  margin: 5em 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
   grid-gap: 1em;

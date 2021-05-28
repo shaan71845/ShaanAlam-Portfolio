@@ -15,7 +15,9 @@ import {
 
 import styled from "styled-components";
 
-const Project = () => {
+const Project = ({ project }) => {
+  console.log(project);
+
   const [headingRef, headingInView] = useInView({
     rootMargin: "-100px",
   });
@@ -31,14 +33,8 @@ const Project = () => {
 
   useEffect(() => {
     if (headingInView) {
-      console.log("heading in view");
       headingControls.start({
         y: "0%",
-      });
-    } else {
-      console.log("heading not in view");
-      headingControls.start({
-        y: "100%",
       });
     }
   }, [headingInView, headingControls]);
@@ -48,10 +44,6 @@ const Project = () => {
       textControls.start({
         y: "0",
       });
-    } else {
-      textControls.start({
-        y: "100%",
-      });
     }
   }, [textInView, textControls]);
 
@@ -59,10 +51,6 @@ const Project = () => {
     if (linkInView) {
       linkControls.start({
         y: "0",
-      });
-    } else {
-      linkControls.start({
-        y: "100%",
       });
     }
   }, [linkInView, linkControls]);
@@ -75,14 +63,6 @@ const Project = () => {
 
       imageCoverControls.start({
         scaleX: 0,
-      });
-    } else {
-      imageControls.start({
-        scale: 1.6,
-      });
-
-      imageCoverControls.start({
-        scaleX: 1,
       });
     }
   }, [imageInView, imageControls, imageCoverControls]);

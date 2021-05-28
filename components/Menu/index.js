@@ -46,7 +46,7 @@ const Menu = () => {
             variants={menuLinkVariants}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.3 }}
           >
             <Link href="/">Home</Link>
           </LinkContainerInner>
@@ -66,7 +66,7 @@ const Menu = () => {
             variants={menuLinkVariants}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.7 }}
           >
             <Link href="/blogs">Blogs</Link>
           </LinkContainerInner>
@@ -76,7 +76,7 @@ const Menu = () => {
             variants={menuLinkVariants}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.9 }}
           >
             <Link href="/contact">Contact</Link>
           </LinkContainerInner>
