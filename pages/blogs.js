@@ -3,22 +3,9 @@ import Sidebar from "../components/Sidebar";
 import Post from "../components/Post";
 import { motion } from "framer-motion";
 
-const blogGridVariants = {
-  hidden: 0,
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const postVariants = {
-  hidden: { scale: 0.76, y: 30, opacity: 0 },
-  show: { scale: 1, y: 0, opacity: 1 },
-};
-
 const Blogs = ({ posts }) => {
+  console.log(posts);
+
   return (
     <>
       <BlogSection>
@@ -31,11 +18,11 @@ const Blogs = ({ posts }) => {
           >
             Blog Posts
           </motion.h1>
-          <BlogGrid variants={blogGridVariants} initial="hidden" animate="show">
-            {posts.map((post) => (
-              <Post post={post} key={post.id} variants={postVariants} />
-            ))}
-          </BlogGrid>
+          <BlogGrid
+            variants={blogGridVariants}
+            initial="hidden"
+            animate="show"
+          ></BlogGrid>
         </Container>
       </BlogSection>
     </>
@@ -45,7 +32,13 @@ const Blogs = ({ posts }) => {
 export default Blogs;
 
 export async function getStaticProps() {
-  const res = await fetch("https://dev.to/api/articles?username=shaan71845");
+  const res = await fetch("https://dev.to/api/articles/me/published", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "api-key": process.env.DEV_API_KEY,
+    },
+  });
   const posts = await res.json();
 
   return {
