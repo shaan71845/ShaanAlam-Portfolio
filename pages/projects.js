@@ -6,8 +6,11 @@ import { useInView } from "react-intersection-observer";
 import { slideUpVariants } from "../utils/variants";
 import Project from "../components/Project/";
 import withTransition from "../HOC/withTransition";
+import sanityClient from "../client";
 
-const Projects = () => {
+const Projects = ({ projects }) => {
+  console.log(projects);
+
   return (
     <>
       <section className={projectStyles["projects-intro-section"]}>
@@ -62,10 +65,9 @@ const Projects = () => {
       </section>
       <section className={projectStyles["projects-section"]}>
         <div className={projectStyles.projects}>
-          <Project />
-          <Project />
-          <Project />
-          <Project />
+          {projects?.map((project) => (
+            <Project project={project} />
+          ))}
         </div>
       </section>
     </>
@@ -74,25 +76,25 @@ const Projects = () => {
 
 export default withTransition(Projects);
 
-// export async function getStaticProps() {
-//   const projects = await sanityClient.fetch(`*[_type == "project"] {
-//     title,
-//     slug {
-//       current
-//     },
-//     author,
-//     live_link,
-//     github_link,
-//     mainImage {
-//       asset -> {
-//         url
-//       }
-//     }
-//   }`);
-//
-//   return {
-//     props: {
-//       projects,
-//     },
-//   };
-// }
+export async function getStaticProps() {
+  const projects = await sanityClient.fetch(`*[_type == "project"] {
+    title,
+    slug {
+      current
+    },
+    author,
+    live_link,
+    github_link,
+    mainImage {
+      asset -> {
+        url
+      }
+    }
+  }`);
+
+  return {
+    props: {
+      projects,
+    },
+  };
+}
