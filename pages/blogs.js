@@ -6,6 +6,7 @@ import blogStyles from "../styles/Blog.module.scss";
 import Navbar from "../components/Navbar";
 import { slideUpVariants } from "../utils/variants";
 import BlogPost from "../components/BlogPost";
+import withTransition from "../HOC/withTransition";
 
 const Blogs = ({ posts }) => {
   console.log(posts);
@@ -63,7 +64,7 @@ const Blogs = ({ posts }) => {
   );
 };
 
-export default Blogs;
+export default withTransition(Blogs);
 
 export async function getStaticProps() {
   const res = await fetch("https://dev.to/api/articles/me/published", {
@@ -79,6 +80,6 @@ export async function getStaticProps() {
     props: {
       posts,
     },
-    revalidate: 60 * 60 * 24,
+    // revalidate: 60 * 60 * 24,
   };
 }
