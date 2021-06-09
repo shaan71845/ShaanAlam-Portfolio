@@ -45,7 +45,7 @@ export const Titlebar = styled.div`
   .copy-to-clipboard {
     a {
       font-size: 0.8em;
-      font-family: "Fira Code", monospace;
+      font-family: "Operator Mono", sans-serif;
       text-decoration: none;
       padding: 0.5em 1em;
       transition: all 0.5s;

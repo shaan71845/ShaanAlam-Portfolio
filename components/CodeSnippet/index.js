@@ -34,7 +34,7 @@ const CodeSnippet = ({ code, language }) => {
         style={synthwave84}
         customStyle={{
           margin: "2em 0",
-          fontFamily: "Fira Code, monospace",
+          fontFamily: "Operator Mono, sans-serif",
           width: "100%",
           fontSize: "1em",
           margin: "auto",
