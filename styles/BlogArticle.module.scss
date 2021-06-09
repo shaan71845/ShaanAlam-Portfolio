@@ -15,13 +15,18 @@
   .go-back-btn {
     position: absolute;
     top: 1em;
-    left: 3em;
+    left: 4.5em;
     padding: 16px 24px;
     background: #fff;
     font-family: "Poppins", sans-serif;
     color: #000;
     cursor: pointer;
     text-decoration: none;
+
+    @include mobileL {
+      padding: 8px 15px;
+      left: 1.2em;
+    }
   }
 
   .container {
