@@ -1,13 +1,18 @@
 import styles from "../../styles/BlogArticle.module.scss";
 import ReactMarkdown from "react-markdown";
 import CodeSnippet from "../../components/CodeSnippet";
+import gfm from "remark-gfm";
+import Moment from "react-moment";
 
 const Post = ({ post }) => {
   console.log(post);
 
   const renderers = {
-    code: function CS({ language, value }) {
+    code: ({ language, value }) => {
       return <CodeSnippet language={language} code={value} />;
+    },
+    link: (props) => {
+      return <a href={props.href}>{props.children}</a>;
     },
   };
 
@@ -17,11 +22,25 @@ const Post = ({ post }) => {
         <header>
           <img src={post.cover_image} alt={post.title} />
           <h1>{post.title}</h1>
+          <div className={styles.tags}>
+            <div className={styles["created-at"]}>
+              <img src={post.user.profile_image} alt="Shaan Alam" />
+              <small>
+                Shaan Alam on{" "}
+                <Moment format="D MMM YYYY">{post.created_at}</Moment>
+              </small>
+            </div>
+            {post.tags.map((tag) => (
+              <small key={tag}>#{tag}</small>
+            ))}
+          </div>
         </header>
+
         <div className={styles["post-body"]}>
           <ReactMarkdown
             className="md-content"
             renderers={renderers}
+            plugins={[gfm]}
             linkTarget="_blank"
           >
             {post.body_markdown}
