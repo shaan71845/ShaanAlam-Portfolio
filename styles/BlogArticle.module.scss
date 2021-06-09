@@ -16,7 +16,7 @@
 
     h1 {
       font-family: "Abril Fatface", serif;
-      margin: 30px 0;
+      margin: 30px 0 20px 0;
       font-size: 300%;
       color: #fff;
 
@@ -24,9 +24,35 @@
         font-size: 200%;
       }
     }
+
+    .tags {
+      small {
+        color: #ddd;
+        margin-right: 10px;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+
+    .created-at {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      color: #ddd;
+      margin-right: 10px;
+      font-family: "Poppins", sans-serif;
+
+      img {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        margin-right: 10px;
+      }
+    }
   }
 
   .post-body {
+    margin-top: 30px;
+
     h1,
     h2,
     h3,
