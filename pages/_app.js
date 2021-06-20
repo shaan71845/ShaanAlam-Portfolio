@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
 import Router from "next/router";
+import { useTransitionFix } from "../utils/useTransitionFix";
 
 const GlobalStyle = createGlobalStyle`
  * {
@@ -37,25 +38,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function MyApp({ Component, pageProps, router }) {
-  useEffect(() => {
-    const routeChange = () => {
-      // Temporary fix to avoid flash of unstyled content
-      // during route transitions. Keep an eye on this
-      // issue and remove this code when resolved:
-      // https://github.com/vercel/next.js/issues/17464
-
-      const tempFix = () => {
-        const allStyleElems = document.querySelectorAll('style[media="x"]');
-        allStyleElems.forEach((elem) => {
-          elem.removeAttribute("media");
-        });
-      };
-      tempFix();
-    };
-
-    Router.events.on("routeChangeComplete", routeChange);
-    Router.events.on("routeChangeStart", routeChange);
-  }, []);
+  const transitionCallback = useTransitionFix();
 
   return (
     <>
@@ -90,7 +73,11 @@ function MyApp({ Component, pageProps, router }) {
           width: "100vw",
         }}
       >
-        <AnimatePresence initial={false} exitBeforeEnter>
+        <AnimatePresence
+          initial={false}
+          exitBeforeEnter
+          onExitComplete={transitionCallback}
+        >
           <Component {...pageProps} key={router.route} one={"one"} />
         </AnimatePresence>
       </div>
