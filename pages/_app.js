@@ -66,8 +66,13 @@ function MyApp({ Component, pageProps, router }) {
         />
       </Head>
       <GlobalStyle />
-      <div style={{ width: "100%" }}>
-        <AnimatePresence initial={true} exitBeforeEnter>
+      <div
+        style={{
+          maxWidth: "100vw",
+          width: "100vw",
+        }}
+      >
+        <AnimatePresence initial={false} exitBeforeEnter>
           <Component {...pageProps} key={router.route} one={"one"} />
         </AnimatePresence>
       </div>

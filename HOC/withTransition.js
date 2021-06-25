@@ -76,14 +76,7 @@ export const pathVariants = {
 const withTransition = (OriginalComponent) => {
   const ComponentWithTransition = (props) => (
     <>
-      <motion.div
-        variants={parentContainerVariant}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
-        <OriginalComponent {...props} />
-      </motion.div>
+      <OriginalComponent {...props} />
       <motion.div
         className={styles["slide-in"]}
         initial={{ scaleX: 0 }}
