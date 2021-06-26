@@ -8,8 +8,6 @@ import Link from "next/link";
 import Navbar from "../../components/Navbar";
 
 const Post = ({ post }) => {
-  console.log(post);
-
   const renderers = {
     code: ({ language, value }) => {
       return <CodeSnippet language={language} code={value} />;
