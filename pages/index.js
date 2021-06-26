@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import homeStyles from "../styles/Home.module.scss";
+import styles from "../styles/Home.module.scss";
 import buttonStyles from "../styles/Button.module.scss";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -12,20 +12,40 @@ import {
 import withTransition from "../HOC/withTransition";
 import { slideUpVariants } from "../utils/variants";
 
-const linkContainerVariants = {
+const smallHeaderVariant = {
   hidden: {
     opacity: 0,
   },
   visible: {
     opacity: 1,
-    delay: 1,
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 0.8,
     },
   },
 };
 
-const linkVariants = {
+const smallHeaderCharVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+
+const headerVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const headerCharVariant = {
   hidden: {
     opacity: 0,
   },
@@ -36,125 +56,44 @@ const linkVariants = {
 
 const Home = () => {
   return (
-    <main className={homeStyles.main}>
-      <aside className={homeStyles["main-aside"]}>
-        <motion.div
-          className={homeStyles["social-icons"]}
-          variants={linkContainerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.a
-            href="https://instagram.com/shaancodes"
-            target="_blank"
-            rel="noreferrer"
-            vartiants={linkVariants}
+    <>
+      <Navbar />
+      <div className={styles.home}>
+        <div className={styles["small-header"]}>
+          <motion.h5
+            variants={smallHeaderVariant}
+            initial="hidden"
+            animate="visible"
           >
-            <LogoInstagram color="#121212" />
-          </motion.a>
-          <motion.a
-            href="https://github.com/shaan71845"
-            target="_blank"
-            rel="noreferrer"
-            variants={linkVariants}
+            {"Hey".split("").map((char) => (
+              <motion.span variants={smallHeaderCharVariant}>
+                {char}
+              </motion.span>
+            ))}
+          </motion.h5>
+        </div>
+        <div className={styles["header"]}>
+          <motion.h1
+            variants={headerVariant}
+            initial="hidden"
+            animate="visible"
           >
-            <LogoGithub color="#121212" />
-          </motion.a>
-          <motion.a
-            href="https://twitter.com/shaancodes"
-            target="_blank"
-            rel="noreferrer"
-            variants={linkVariants}
-          >
-            <LogoTwitter color="#121212" />
-          </motion.a>
-          <motion.a
-            href="https://www.linkedin.com/in/shaan-alam-01784018a/"
-            target="_blank"
-            rel="noreferrer"
-            variants={linkVariants}
-          >
-            <LogoLinkedin color="#121212" />
-          </motion.a>
-        </motion.div>
-        <motion.span
-          initial={{ scaleY: 0, opacity: 0 }}
-          animate={{ scaleY: 1, opacity: 1 }}
-          transition={{ duration: 2, ease: "easeInOut" }}
-        ></motion.span>
-      </aside>
-      <div className={homeStyles["main-right"]}>
-        <Navbar />
-        <div className={homeStyles.container}>
-          <div className={homeStyles["container-left"]}>
-            <h1 className={homeStyles.heading}>
-              <div className={homeStyles["heading-inner"]}>
-                <motion.div
-                  variants={slideUpVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ ease: "easeOut", duration: 1, delay: 0.8 }}
-                >
-                  Hey,
-                </motion.div>
-              </div>
-              <div className={homeStyles["heading-inner"]}>
-                <motion.div
-                  variants={slideUpVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ ease: "easeOut", duration: 1, delay: 0.89 }}
-                >
-                  I am Shaan Alam
-                </motion.div>
-              </div>
-            </h1>
-            <div className={homeStyles.subtitle}>
-              <motion.p
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                transition={{ ease: "easeOut", duration: 1, delay: 0.9 }}
-              >
-                I turn ideas into code...
-              </motion.p>
-            </div>
-            <div className={homeStyles.actions}>
-              <div className={homeStyles["actions-inner"]}>
-                <Link href="/projects" scroll={false}>
-                  <motion.a
-                    className={buttonStyles["btn-primary"]}
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    transition={{ ease: "easeIn", duration: 0.5, delay: 1 }}
-                  >
-                    My Projects
-                  </motion.a>
-                </Link>
-              </div>
-              <div className={homeStyles["actions-inner"]}>
-                <motion.a
-                  href="#!"
-                  className={buttonStyles["btn-primary"]}
-                  variants={slideUpVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ ease: "easeIn", duration: 0.5, delay: 1.05 }}
-                >
-                  Download CV
-                </motion.a>
-              </div>
-            </div>
-          </div>
-          <img
-            src="./images/coding.svg"
-            alt="Logo"
-            className={homeStyles["hero-image"]}
-            onError={() => console.log("###error")}
-            onLoad={() => console.log("###error")}
-          />
+            {"I'm Shaan Alam".split("").map((char) => (
+              <motion.span variants={headerCharVariant}>{char}</motion.span>
+            ))}
+          </motion.h1>
+        </div>
+        <div className={styles["hero-text"]}>
+          Front-End Developer, Programmer, Problem Solver
+        </div>
+        <div className={styles["hero-actions"]}>
+          <Link href="/projects">
+            <a className={buttonStyles["btn-primary"]}>My Projects</a>
+          </Link>
+          <a className={buttonStyles["btn-primary"]}>Download CV</a>
         </div>
       </div>
-    </main>
+    </>
   );
 };
 

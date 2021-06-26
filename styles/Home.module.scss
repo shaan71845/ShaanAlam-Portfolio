@@ -1,113 +1,78 @@
 @import "config";
 
-.main {
-  display: flex;
-  background: #fff;
-  height: 100vh;
-}
-
-.main-aside {
-  flex: 0.2;
-  border-right: 1px solid rgba(0, 0, 0, 0.096);
+.home {
+  height: 80vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  height: 100%;
+}
 
-  @include tablet {
-    flex: 0.5;
-  }
+.small-header {
+  h5 {
+    position: relative;
+    overflow: hidden;
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 200%;
 
-  .social-icons {
-    height: 200px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
+    @media screen and (max-width: 500px) {
+      font-size: 100%;
+    }
 
-  & > span {
-    height: 120px;
-    width: 2px;
-    background: #303030;
-    transform-origin: bottom;
+    span {
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
   }
 }
 
-.main-right {
-  flex: 4;
-  // display:
+.header {
+  h1 {
+    font-size: 500%;
+    font-weight: bold;
+    font-family: "Alegreya Sans", sans-serif;
 
-  .container {
-    width: 90%;
-    margin: 4rem auto;
-    overflow: hidden;
+    @include tablet {
+      font-size: 350%;
+    }
+
+    @media screen and (max-width: 500px) {
+      font-size: 200%;
+    }
+
+    span {
+      margin: 0 4px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.hero-text {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Alegreya Sans", sans-serif;
+  text-transform: uppercase;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.hero-actions {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+
+  @include tablet {
+    width: 80%;
   }
 
-  & .container {
-    display: flex;
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
 
-    .container-left {
-      flex: 1;
-    }
-
-    .hero-image {
-      width: 50%;
-      flex: 0.8;
-
-      // Hide svg background on screen < 900px;
-      @include tabletL {
-        display: none;
-      }
-    }
-
-    .heading {
-      font-family: "Abril Fatface", serif;
-      font-size: 4rem;
-      line-height: 1.5;
-      text-transform: uppercase;
-      color: #303030;
-
-      &-inner {
-        position: relative;
-        overflow: hidden;
-      }
-
-      @include mobileL {
-        font-size: 2rem;
-      }
-    }
-
-    .subtitle {
-      position: relative;
-      overflow: hidden;
-
-      p {
-        color: #fff;
-        font-size: 2rem;
-        font-family: "Alegreya Sans", sans-serif;
-
-        @include mobileL {
-          font-size: 1rem;
-        }
-      }
-    }
-
-    .actions {
-      margin-top: 2rem;
-      display: flex;
-
-      &-inner {
-        position: relative;
-        overflow: hidden;
-      }
-
-      div:nth-child(2) {
-        margin: 0 20px;
-      }
+    a {
+      width: 100%;
+      margin-bottom: 1em;
     }
   }
 }

@@ -72,7 +72,7 @@ function MyApp({ Component, pageProps, router }) {
           width: "100vw",
         }}
       >
-        <AnimatePresence initial={false} exitBeforeEnter>
+        <AnimatePresence initial={true} exitBeforeEnter>
           <Component {...pageProps} key={router.route} one={"one"} />
         </AnimatePresence>
       </div>
