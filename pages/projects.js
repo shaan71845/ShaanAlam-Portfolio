@@ -1,7 +1,7 @@
 import projectStyles from "../styles/Projects.module.scss";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
-import { slideUpVariants } from "../utils/variants";
+import { slideUpVariants } from "../utils/utils";
 import Project from "../components/Project/";
 import withTransition from "../HOC/withTransition";
 import sanityClient from "../client";

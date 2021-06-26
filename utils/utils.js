@@ -90,3 +90,17 @@ export const linkVariant = {
     opacity: 1,
   },
 };
+
+/**
+ * @type - object
+ * @desc - Variant object for slideup animation
+ */
+
+export const slideUpVariants = {
+  hidden: {
+    y: " 100%",
+  },
+  visible: {
+    y: 0,
+  },
+};
