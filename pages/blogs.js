@@ -4,7 +4,7 @@ import Post from "../components/Post";
 import { motion } from "framer-motion";
 import blogStyles from "../styles/Blog.module.scss";
 import Navbar from "../components/Navbar";
-import { slideUpVariants } from "../utils/variants";
+import { slideUpVariants } from "../utils/utils";
 import BlogPost from "../components/BlogPost";
 import withTransition from "../HOC/withTransition";
 

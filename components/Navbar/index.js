@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styled from "styled-components";
 import { Nav, Container, Logo, Bars } from "./Navbar.sc";
 import { AnimatePresence, motion } from "framer-motion";
 import Menu from "../Menu";

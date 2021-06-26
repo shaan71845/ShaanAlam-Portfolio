@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { slideUpVariants } from "../../utils/variants";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
