@@ -1,24 +1,92 @@
-// Screen size breakpoints
+/**
+ * @type - object
+ * @desc - Variant object for text small header Container (h5) on homepage
+ */
 
-const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
-  tablet: "768px",
-  tabletL: "900px",
-  laptop: "1024px",
-  laptopL: "1440px",
-  desktop: "2560px",
+export const smallHeaderVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.8,
+    },
+  },
 };
 
-export const devices = {
-  mobileS: `(max-width: ${size.mobileS})`,
-  mobileM: `(max-width: ${size.mobileM})`,
-  mobileL: `(max-width: ${size.mobileL})`,
-  tablet: `(max-width: ${size.tablet})`,
-  tabletL: `(max-width: ${size.tabletL})`,
-  laptop: `(max-width: ${size.laptop})`,
-  laptopL: `(max-width: ${size.laptopL})`,
-  desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktop})`,
+/**
+ * @type - object
+ * @desc - Variant object for text small header characters (span) on homepage
+ */
+
+export const smallHeaderCharVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+
+/**
+ * @type - object
+ * @desc - Variant object for text header Container (h1) on homepage
+ */
+
+export const headerVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+/**
+ * @type - object
+ * @desc - Variant object for text header characters (span) on homepage
+ */
+
+export const headerCharVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+
+/**
+ * @type - object
+ * @desc - Variant object for social links container (<div>) on homepage
+ */
+
+export const linkContainerVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+/**
+ * @type - object
+ * @desc - Variant object for social links (<a>) on homepage
+ */
+
+export const linkVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
 };

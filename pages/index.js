@@ -10,49 +10,14 @@ import {
   LogoTwitter,
 } from "react-ionicons";
 import withTransition from "../HOC/withTransition";
-import { slideUpVariants } from "../utils/variants";
-
-const smallHeaderVariant = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.8,
-    },
-  },
-};
-
-const smallHeaderCharVariant = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-  },
-};
-
-const headerVariant = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const headerCharVariant = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-  },
-};
+import {
+  smallHeaderVariant,
+  smallHeaderCharVariant,
+  headerVariant,
+  headerCharVariant,
+  linkContainerVariant,
+  linkVariant,
+} from "../utils/utils";
 
 const Home = () => {
   return (
@@ -83,15 +48,72 @@ const Home = () => {
             ))}
           </motion.h1>
         </div>
-        <div className={styles["hero-text"]}>
+        <motion.div
+          className={styles["hero-text"]}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
           Front-End Developer, Programmer, Problem Solver
-        </div>
+        </motion.div>
         <div className={styles["hero-actions"]}>
           <Link href="/projects">
-            <a className={buttonStyles["btn-primary"]}>My Projects</a>
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 0.5 }}
+              className={buttonStyles["btn-primary"]}
+            >
+              My Projects
+            </motion.a>
           </Link>
-          <a className={buttonStyles["btn-primary"]}>Download CV</a>
+          <motion.a
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 0.5, delay: 0.5 }}
+            className={buttonStyles["btn-primary"]}
+          >
+            Download CV
+          </motion.a>
         </div>
+        <motion.div
+          className={styles["social-links"]}
+          variants={linkContainerVariant}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.a
+            href="https://www.instagram.com/shaancodes/"
+            variants={linkVariant}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LogoInstagram />
+          </motion.a>
+          <motion.a
+            href="https://github.com/shaan71845"
+            variants={linkVariant}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LogoGithub />
+          </motion.a>
+          <motion.a
+            href="https://twitter.com/shaancodes"
+            variants={linkVariant}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LogoTwitter />
+          </motion.a>
+          <motion.a
+            href="https://www.linkedin.com/in/shaan-alam-01784018a/"
+            variants={linkVariant}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LogoLinkedin />
+          </motion.a>
+        </motion.div>
       </div>
     </>
   );

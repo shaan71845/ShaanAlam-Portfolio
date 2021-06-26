@@ -76,3 +76,20 @@
     }
   }
 }
+
+.social-links {
+  margin-top: 2em;
+
+  a {
+    margin-right: 20px;
+
+    svg {
+      transition: all 0.4s;
+      fill: rgba(0, 0, 0, 0.6);
+
+      &:hover {
+        fill: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+}

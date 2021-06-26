@@ -1,9 +1,6 @@
-import { useEffect } from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
-import Router from "next/router";
-import { useTransitionFix } from "../utils/useTransitionFix";
 
 const GlobalStyle = createGlobalStyle`
  * {
@@ -38,7 +35,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function MyApp({ Component, pageProps, router }) {
-  const transitionCallback = useTransitionFix();
 
   return (
     <>
