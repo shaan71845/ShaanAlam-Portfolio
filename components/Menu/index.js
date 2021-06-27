@@ -91,18 +91,6 @@ const Menu = () => {
             </Link>
           </LinkContainerInner>
         </LinkContainer>
-        <LinkContainer>
-          <LinkContainerInner
-            variants={menuLinkVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 1, delay: 0.9 }}
-          >
-            <Link href="/contact" scroll={false}>
-              Contact
-            </Link>
-          </LinkContainerInner>
-        </LinkContainer>
       </Container>
     </Wrapper>
   );
