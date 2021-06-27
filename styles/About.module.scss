@@ -25,30 +25,15 @@
 
       margin-top: 100px;
       margin-bottom: 30px;
+    }
 
-      h1 {
+    h1 {
+      font-family: "Abril Fatface", sans-serif;
+      font-size: 300%;
+
+      .h1-inner {
         position: relative;
-        width: -moz-fit-content;
-        font-family: "Abril Fatface", serif;
-        color: #303030;
-        font-size: 300%;
-
-        @include mobileL {
-          text-align: center;
-        }
-
-        .h1-inner {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          z-index: 2;
-          width: 100%;
-          background: #303030;
-          transform-origin: right;
-          transform: scaleX(1);
-        }
+        overflow: hidden;
       }
     }
 
@@ -101,27 +86,12 @@
   }
 
   h1 {
-    position: relative;
-    width: -moz-fit-content;
-    font-family: "Abril Fatface", serif;
-    color: #303030;
+    font-family: "Abril Fatface", sans-serif;
     font-size: 300%;
 
-    @include mobileL {
-      text-align: center;
-    }
-
     .h1-inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 2;
-      width: 100%;
-      background: #303030;
-      transform-origin: right;
-      transform: scaleX(1);
+      position: relative;
+      overflow: hidden;
     }
   }
 
@@ -147,3 +117,29 @@
     }
   }
 }
+
+// h1 {
+//   position: relative;
+//   width: -moz-fit-content;
+//   font-family: "Abril Fatface", serif;
+//   color: #303030;
+//   font-size: 300%;
+
+//   @include mobileL {
+//     text-align: center;
+//   }
+
+//   .h1-inner {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     z-index: 2;
+//     width: 100%;
+//     background: #303030;
+//     transform-origin: right;
+//     transform: scaleX(1);
+//   }
+// }
+// }

@@ -24,7 +24,7 @@ const About = ({ about, experiences }) => {
   useEffect(() => {
     if (skillsHeaderInView) {
       skillsheaderControls.start({
-        scaleX: 0,
+        y: 0,
       });
     }
   }, [skillsHeaderInView, skillsheaderControls]);
@@ -37,14 +37,15 @@ const About = ({ about, experiences }) => {
           <div className={styles["hero-content"]}>
             <header className={styles.header}>
               <h1>
-                <motion.div
-                  className={styles["h1-inner"]}
-                  initial={{ scaleX: 1 }}
-                  animate={headerControls}
-                  transition={{ ease: "easeInOut", duration: 0.5, delay: 0.7 }}
-                  ref={headerRef}
-                ></motion.div>
-                Shaan Alam
+                <div className={styles["h1-inner"]}>
+                  <motion.div
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ ease: "easeInOut", duration: 0.8 }}
+                  >
+                    Shaan Alam
+                  </motion.div>
+                </div>
               </h1>
             </header>
             <motion.p
@@ -73,14 +74,17 @@ const About = ({ about, experiences }) => {
       <section className={styles.skills}>
         <div className={styles.container}>
           <h1>
-            <motion.div
-              initial={{ scaleX: 1 }}
-              animate={skillsheaderControls}
-              transition={{ ease: "easeInOut", duration: 0.5, delay: 0.7 }}
-              ref={skillsHeaderRef}
-              className={styles["h1-inner"]}
-            ></motion.div>
-            My Skills
+            <div className={styles["h1-inner"]}>
+              <motion.div
+                initial={{ y: "100%" }}
+                animate={skillsheaderControls}
+                transition={{ ease: "easeInOut", duration: 0.5, delay: 0.7 }}
+                ref={skillsHeaderRef}
+                className={styles["h1-inner"]}
+              >
+                My Skills
+              </motion.div>
+            </div>
           </h1>
           <div className={styles["skills-grid"]}>
             <div className={styles["skills-container"]}>
