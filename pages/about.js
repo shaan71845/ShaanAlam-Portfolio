@@ -5,21 +5,14 @@ import styles from "../styles/About.module.scss";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Navbar from "../components/Navbar";
+import BlockContent from "@sanity/block-content-to-react";
 
-const About = ({ about, experiences }) => {
-  const [headerRef, headerInView] = useInView();
+const About = ({ about }) => {
+  // Ref for Skill Header ('My Skills'
   const [skillsHeaderRef, skillsHeaderInView] = useInView();
 
-  const headerControls = useAnimation();
+  // Animation for Skill Header ('My Skills')
   const skillsheaderControls = useAnimation();
-
-  useEffect(() => {
-    if (headerInView) {
-      headerControls.start({
-        scaleX: 0,
-      });
-    }
-  }, [headerInView, headerControls]);
 
   useEffect(() => {
     if (skillsHeaderInView) {
@@ -53,12 +46,7 @@ const About = ({ about, experiences }) => {
               animate={{ opacity: 1 }}
               transition={{ ease: "easeInOut", delay: 1.2 }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Accusantium eligendi iure dolorem molestiae ipsum unde, cum, odio
-              porro excepturi odit ut minima assumenda recusandae facere eaque
-              magni totam pariatur. Iure.ima assumenda recusandae facere eaque
-              magni totam pariatur. Iure.ima assumenda recusandae facere eaque
-              magni totam pariatur. Iure.
+              <BlockContent blocks={about.bio} />
             </motion.p>
           </div>
           <motion.div
@@ -148,19 +136,9 @@ export async function getStaticProps() {
     }
   }[0]`);
 
-  const experiences = await sanityClient.fetch(`
-    *[_type == "experiences"] {
-      title,
-      role,
-      starting_date,
-      ending_date
-    }
-  `);
-
   return {
     props: {
       about,
-      experiences,
     },
   };
 }
